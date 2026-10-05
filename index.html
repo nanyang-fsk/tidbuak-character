@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="th">
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Khon Tid Buak Character Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* myanmar */
+@font-face {
+  font-family: 'Padauk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/bbed239f-ded7-47e0-bd26-817f785a99fa.woff2") format('woff2');
+  unicode-range: U+1000-109F, U+200C-200D, U+25CC, U+A92E, U+A9E0-A9FE, U+AA60-AA7F, U+116D0-116E3;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Padauk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/b6c3792c-0b0e-4510-9ac0-af3b10c61c26.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Padauk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/68c48ae8-6333-46c6-b7a0-88fac3257d26.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* myanmar */
+@font-face {
+  font-family: 'Padauk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/058be5b4-a60f-4a18-afa5-943f2d498681.woff2") format('woff2');
+  unicode-range: U+1000-109F, U+200C-200D, U+25CC, U+A92E, U+A9E0-A9FE, U+AA60-AA7F, U+116D0-116E3;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Padauk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/ce8e2de1-440d-445d-a9e1-eace682b9e56.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Padauk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fcdc728a-2377-4e4f-a045-0486d54459a1.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* thai */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/153e7c2e-c26e-4bc7-bc6e-dc95abdd2d68.woff2") format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fc0ec998-5fb3-4239-9b6f-3e7e9fcf2e06.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/43f68fe0-3eab-4eb0-a848-89506238c99e.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/7fa2e6cd-1f00-4094-9ed5-3528ef81f749.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* thai */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/2ce1e352-059e-46f1-908d-7deb91e5c570.woff2") format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/740e3959-253d-4699-9031-e57cd7c64c09.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/c101db75-6e91-45db-a1ed-b630b700efe7.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/a261defe-dcd8-45da-8e7c-d49742df229c.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* thai */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/a75818e1-786c-4305-a7a8-4ac81aa56484.woff2") format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/d1d49e21-ed66-45ef-95bd-02859cbc4805.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/7bef6fc4-662d-4540-9c9b-e72adcb40cd7.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/3d9e013f-5135-4ca2-a909-2a88d3bb936e.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* thai */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/0df13631-9dcd-45b6-ab1e-bc5551aa7ff6.woff2") format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/e58abaa3-e220-4b6b-9100-c300d2cba87a.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/8e7cc02c-fdaf-4ab0-ba0e-905ccf3af6d8.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/cb4bc9fd-9ddf-48e1-8c5a-4e18d2d6a903.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Sarabun','Padauk','Noto Sans Lao','Phetsarath OT','Lao UI',Arial,sans-serif;background:#F4ECD6;display:flex;align-items:center;justify-content:center;min-height:100vh;min-height:100dvh;padding:24px;}
+:root{--yellow:#F6C915;--yellow-deep:#E0A50A;--yellow-light:#FEF6CE;--yellow-soft:#FBEAA0;--ink:#1C1C1A;--text:#2A2722;--muted:#857C6A;--radius:16px;}
+
+#app-shell{max-width:1120px;width:100%;height:min(920px,calc(100dvh - 48px));min-height:min(640px,calc(100dvh - 48px));background:linear-gradient(160deg,#FFFDF6,#fff);border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.14);display:flex;flex-direction:column;position:relative}
+.screen{display:none;flex-direction:column;flex:1;min-height:0;overflow-y:auto}
+.screen.active{display:flex}
+
+/* LANGUAGE SWITCHER */
+.lang-switch{position:absolute;top:12px;right:12px;z-index:60;display:flex;gap:3px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-radius:22px;padding:4px;box-shadow:0 3px 12px rgba(0,0,0,.18)}
+.lang-btn{border:none;background:transparent;cursor:pointer;border-radius:16px;padding:5px 8px;display:flex;flex-direction:column;align-items:center;gap:1px;font-family:inherit;transition:.15s;min-width:34px}
+.lang-flag{font-size:16px;line-height:1}
+.lang-code{font-size:9px;font-weight:700;color:var(--muted);letter-spacing:.5px}
+.lang-btn.active{background:var(--yellow)}
+.lang-btn.active .lang-code{color:var(--ink)}
+.lang-btn:active{transform:scale(.94)}
+
+/* INTRO */
+#screen-intro{align-items:center;justify-content:center;text-align:center;padding:54px 30px 36px;background:linear-gradient(170deg,#FFFDF6,#FBF1D6);color:var(--text);overflow-y:auto}
+.intro-logo{display:block;width:248px;max-width:74vw;margin-bottom:6px}
+.intro-mascot{width:108px;margin-bottom:10px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.18))}
+.intro-title{font-size:24px;font-weight:700;margin-bottom:10px;line-height:1.3;color:var(--ink)}
+.intro-sub{font-size:13.5px;color:var(--muted);margin-bottom:24px;line-height:1.6}
+.intro-chars{display:flex;justify-content:center;gap:8px;margin-bottom:26px;flex-wrap:wrap}
+.intro-char-badge{font-size:22px;background:var(--yellow-light);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.start-btn{background:var(--yellow);color:var(--ink);border:none;padding:16px 48px;border-radius:50px;font-size:17px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 6px 18px rgba(246,201,21,.45);transition:.15s}
+.start-btn:active{transform:scale(.97)}
+.intro-foot{font-size:11.5px;color:var(--muted);margin-top:20px}
+
+/* QUIZ */
+#screen-quiz{padding:54px 28px 24px;justify-content:flex-start}
+.q-progress-dots{display:flex;justify-content:center;gap:8px;margin-bottom:22px}
+.q-dot{width:36px;height:5px;border-radius:3px;background:#E7E0CC;transition:.3s}
+.q-dot.done{background:var(--yellow-deep)}
+.q-dot.current{background:var(--ink)}
+.q-num-label{text-align:center;font-size:12px;color:var(--yellow-deep);font-weight:700;letter-spacing:1px;margin-bottom:8px}
+.q-text{text-align:center;font-size:19px;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:26px;padding:0 4px}
+.q-options{display:flex;flex-direction:column;gap:12px;width:100%;max-width:760px;margin-inline:auto}
+.q-opt{background:#fff;border:2px solid #EAE3D2;border-radius:14px;padding:16px 18px;font-size:15px;color:var(--text);cursor:pointer;text-align:left;font-family:inherit;line-height:1.4;transition:.15s;display:flex;align-items:center;gap:12px}
+.q-opt:hover{border-color:var(--yellow);background:var(--yellow-light);transform:translateY(-1px)}
+.q-opt:active{transform:scale(.98)}
+.q-opt-letter{width:28px;height:28px;border-radius:50%;background:var(--yellow-light);color:#8A6500;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* QUIZ RESULT */
+#screen-result{padding:0;align-items:stretch}
+.result-hero{padding:48px 28px 32px;text-align:center;color:#fff;position:relative}
+.result-emoji{font-size:78px;margin-bottom:12px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.18))}
+.result-label{font-size:12px;letter-spacing:2px;opacity:.85;text-transform:uppercase;margin-bottom:6px}
+.result-name{font-size:27px;font-weight:700;margin-bottom:10px}
+.result-tagline{font-size:14px;opacity:.92;line-height:1.5;max-width:380px;margin:0 auto}
+.result-body{padding:26px 28px 8px;flex:1;width:100%;max-width:900px;margin-inline:auto}
+.result-desc{font-size:14px;color:var(--text);line-height:1.7;margin-bottom:20px;background:#FBF7E9;border-radius:12px;padding:16px}
+.result-traits{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.result-trait{background:var(--yellow-light);color:#8A6500;font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px}
+.result-actions{display:flex;flex-direction:column;gap:10px;padding:0 28px 28px;width:100%;max-width:560px;margin-inline:auto}
+.result-btn{padding:14px;border-radius:12px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;border:none;transition:.15s}
+.result-btn.primary{background:var(--yellow);color:var(--ink)}
+.result-btn.primary:active{transform:scale(.98)}
+.result-btn.secondary{background:#fff;color:var(--ink);border:2px solid var(--yellow-soft)}
+
+/* CHARACTER SELECT */
+#screen-select{padding:50px 24px 28px;align-items:center;text-align:center}
+.sel-logo{width:124px;margin-bottom:14px}
+.sel-title{font-size:20px;font-weight:700;color:var(--text);margin-bottom:6px}
+.sel-sub{font-size:13px;color:var(--muted);margin-bottom:22px;line-height:1.5}
+.sel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%}
+.sel-card{border:2px solid #EAE3D2;border-radius:14px;padding:14px 10px;cursor:pointer;transition:.15s;background:#fff;text-align:center;position:relative}
+.sel-card:hover{border-color:var(--yellow);transform:translateY(-2px)}
+.sel-card.recommended{border-color:var(--yellow-deep);background:var(--yellow-light)}
+.sel-badge{position:absolute;top:-8px;right:8px;background:var(--yellow-deep);color:var(--ink);font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px}
+.sel-emoji{font-size:30px;margin-bottom:6px}
+.sel-name{font-size:11.5px;font-weight:700;color:var(--text);line-height:1.3}
+.sel-game{font-size:10px;color:var(--muted);margin-top:2px}
+.sel-back-link{font-size:12px;color:var(--muted);margin-top:18px;cursor:pointer;text-decoration:underline}
+
+/* GAME HEADER */
+.game-header{padding:16px 20px;display:flex;align-items:center;gap:10px;color:#fff}
+.game-back{background:rgba(255,255,255,.22);border:none;width:28px;height:28px;border-radius:50%;color:#fff;font-size:14px;cursor:pointer;flex-shrink:0}
+.game-header-text{flex:1}
+.game-title{font-size:14px;font-weight:700}
+.game-sub{font-size:11px;opacity:.88}
+.game-timer{background:rgba(255,255,255,.22);border-radius:8px;padding:4px 10px;font-size:13px;font-weight:700;flex-shrink:0}
+.game-body{flex:1;padding:20px;display:flex;flex-direction:column;width:100%;max-width:1000px;align-self:center}
+.game-instruction{font-size:13px;color:var(--muted);text-align:center;margin:0 auto 16px;line-height:1.5;max-width:760px}
+
+.gauge-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px}
+.gauge-track{width:60px;height:280px;background:#EEE;border-radius:30px;position:relative;overflow:hidden;border:3px solid #E0E0DD}
+.gauge-fill{position:absolute;bottom:0;left:0;width:100%;background:linear-gradient(0deg,#C8860D,#E8A020);border-radius:0 0 27px 27px;transition:height .05s linear}
+.gauge-target-zone{position:absolute;left:0;right:0;background:rgba(45,106,45,.2);border-top:2px dashed #2D6A2D;border-bottom:2px dashed #2D6A2D}
+.tap-btn{background:#C8860D;color:#fff;border:none;padding:16px 44px;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 4px 14px rgba(200,134,13,.4);user-select:none}
+.tap-btn:active{transform:scale(.95)}
+.gauge-score{font-size:13px;color:var(--muted)}
+
+.data-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;flex:1;align-content:center;width:100%;max-width:840px;margin-inline:auto}
+.data-card{background:#fff;border:2px solid #EAE3D2;border-radius:12px;padding:14px 8px;text-align:center;cursor:pointer;transition:.15s}
+.data-card:hover{border-color:#1F6FB2;transform:scale(1.03)}
+.data-card.wrong-flash{animation:shake .3s;border-color:#C0392B}
+.data-num{font-size:22px;font-weight:700;color:var(--text)}
+.data-label{font-size:9px;color:var(--muted);margin-top:2px}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+
+.belt-wrap{flex:1;position:relative;background:#F4EEDD;border-radius:12px;overflow:hidden;border:2px solid #EAE3D2}
+.belt-line{position:absolute;left:0;right:0;border-top:3px dashed #C0392B;font-size:10px;color:#C0392B;text-align:center;padding-top:2px}
+.belt-item{position:absolute;width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer;transition:transform .1s;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+.belt-item.tapped{transform:scale(0);opacity:0}
+
+.sort-item{font-size:40px;text-align:center;margin-bottom:16px}
+.sort-buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sort-btn{padding:18px;border-radius:14px;border:none;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#fff}
+.sort-btn.good{background:#3B7A3B}
+.sort-btn.redo{background:#B23A3A}
+.sort-btn:active{transform:scale(.96)}
+.sort-progress{text-align:center;font-size:12px;color:var(--muted);margin-top:14px}
+
+.whack-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(100px,1fr));gap:10px;flex:1;width:100%;max-width:840px;margin-inline:auto}
+.whack-cell{background:#fff;border:2px solid #EAE3D2;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;transition:.1s}
+.whack-cell.active{border-color:#A85A1E;background:#FDF1E6;animation:pop .3s}
+.whack-cell.hit{transform:scale(0);opacity:0}
+@keyframes pop{from{transform:scale(.7)}to{transform:scale(1)}}
+
+.path-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;flex:1;align-content:center;width:100%;max-width:620px;margin-inline:auto}
+.path-cell{aspect-ratio:1;background:#fff;border:2px solid #EAE3D2;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;transition:.15s}
+.path-cell.correct{background:var(--yellow-light);border-color:var(--yellow-deep);color:#8A6500}
+.path-cell.wrong{background:#FCE8E8;border-color:#C0392B}
+.path-cell.disabled{opacity:.3;pointer-events:none}
+
+/* GAME RESULT */
+#screen-gameresult{padding:0;align-items:stretch}
+.gr-hero{padding:44px 24px 28px;text-align:center;color:#fff}
+.gr-emoji{font-size:62px;margin-bottom:10px}
+.gr-title{font-size:22px;font-weight:700;margin-bottom:6px}
+.gr-sub{font-size:13px;opacity:.92;line-height:1.5}
+.gr-score-box{background:rgba(255,255,255,.16);border-radius:14px;padding:16px;margin:20px auto 0;max-width:220px}
+.gr-score-num{font-size:34px;font-weight:700}
+.gr-score-label{font-size:11px;opacity:.85;text-transform:uppercase;letter-spacing:1px}
+.gr-actions{padding:24px 24px 28px;display:flex;flex-direction:column;gap:10px}
+.gr-btn{padding:14px;border-radius:12px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;border:none}
+.gr-btn.primary{background:var(--yellow);color:var(--ink)}
+.gr-btn.secondary{background:#fff;color:var(--ink);border:2px solid var(--yellow-soft)}
+
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(100px);background:var(--ink);color:#fff;padding:14px 22px;border-radius:12px;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:.3s;z-index:999;max-width:90%;text-align:center;line-height:1.5}
+#toast.show{transform:translateX(-50%) translateY(0)}
+
+@media (min-width:700px){
+  .lang-switch{top:20px;right:20px;gap:6px;padding:6px}
+  .lang-btn{padding:7px 10px;min-width:40px}
+  #screen-intro{padding:72px 48px 48px}
+  .intro-title{font-size:30px}
+  .intro-sub{font-size:16px}
+  #screen-quiz{padding:72px 56px 36px}
+  .q-progress-dots{width:100%;max-width:760px;margin:0 auto 28px}
+  .q-num-label{font-size:14px}
+  .q-text{font-size:24px;max-width:850px;margin:0 auto 30px}
+  .q-opt{padding:20px 24px;font-size:17px}
+  #screen-result .result-hero{padding:64px 48px 40px}
+  .result-name{font-size:34px}
+  .result-tagline{font-size:17px}
+  .result-body{padding:32px 48px 12px}
+  .result-desc{font-size:17px;padding:22px}
+  #screen-select{padding:68px 48px 40px}
+  .sel-logo{width:150px}
+  .sel-title{font-size:26px}
+  .sel-sub{font-size:16px;margin-bottom:30px}
+  .sel-grid{gap:16px;max-width:920px}
+  .sel-card{min-height:148px;padding:22px 16px}
+  .sel-emoji{font-size:38px}
+  .sel-name{font-size:15px}
+  .sel-game{font-size:13px}
+  .sel-back-link{font-size:14px;margin-top:24px}
+  .game-header{padding:22px 32px;gap:14px}
+  .game-back{width:36px;height:36px;font-size:17px}
+  .game-title{font-size:18px}
+  .game-sub{font-size:14px}
+  .game-timer{font-size:16px;padding:7px 12px}
+  .game-body{padding:32px}
+  .game-instruction{font-size:16px;margin-bottom:24px}
+  .gauge-track{height:clamp(280px,38vh,380px)}
+  .data-card{padding:22px 14px}
+  .data-num{font-size:28px}
+  .data-label{font-size:12px}
+  .belt-wrap{min-height:360px}
+  .sort-item{font-size:54px}
+  .sort-btn{padding:22px;font-size:17px}
+  .whack-cell{font-size:38px}
+  .path-cell{font-size:28px}
+  .gr-hero{padding:64px 40px 36px}
+  .gr-emoji{font-size:76px}
+  .gr-title{font-size:30px}
+  .gr-sub{font-size:16px}
+  .gr-actions{width:100%;max-width:560px;margin-inline:auto;padding:28px 24px 36px}
+  .gr-btn{padding:18px;font-size:16px}
+}
+
+@media (min-width:1000px){
+  .sel-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sort-item{margin-bottom:28px}
+  .sort-buttons{max-width:760px;margin-inline:auto;width:100%}
+}
+
+@media (max-width:480px){
+  body{padding:0}
+  #app-shell{width:100%;height:100vh;height:100dvh;min-height:100vh;min-height:100dvh;border-radius:0;box-shadow:none}
+  .screen{overscroll-behavior:contain}
+  #screen-select{padding:50px 18px 24px}
+  .sel-grid{gap:8px}
+  .sel-card{padding:12px 8px;min-height:104px}
+  .sel-name{overflow-wrap:anywhere}
+  .game-body{padding:16px}
+  .whack-grid{grid-template-rows:repeat(2,minmax(88px,1fr))}
+}
+</style>
+</head>
+<body>
+<div id="app-shell">
+
+  <div class="lang-switch" id="lang-switch">
+    <button class="lang-btn" data-lang="th"><span class="lang-flag">🇹🇭</span><span class="lang-code">ไทย</span></button>
+    <button class="lang-btn" data-lang="en"><span class="lang-flag">🇬🇧</span><span class="lang-code">EN</span></button>
+    <button class="lang-btn" data-lang="my"><span class="lang-flag">🇲🇲</span><span class="lang-code">MY</span></button>
+    <button class="lang-btn" data-lang="lo"><span class="lang-flag">🇱🇦</span><span class="lang-code">ລາວ</span></button>
+  </div>
+
+  <!-- INTRO -->
+  <div class="screen active" id="screen-intro">
+    <img class="intro-logo" src="assets/07b88818-98ef-4b7c-845b-27f50b73c04f.png" alt="Khon Tid Buak — Nanyang Garment">
+    <img class="intro-mascot" src="assets/b62f5036-2a1f-49bb-9c24-def941f57d66.png" alt="BAU+ mascot">
+    <div class="intro-title" id="t-intro-title">คุณคือ "คนติดบวก"<br>แบบไหน?</div>
+    <div class="intro-sub" id="t-intro-sub">ตอบคำถาม 5 ข้อ เพื่อค้นหาว่าคุณ<br>มี DNA ใกล้เคียงกับ Character ไหนมากที่สุด<br>แล้วต่อด้วยมินิเกมเฉพาะตัว!</div>
+    <div class="intro-chars">
+      <div class="intro-char-badge">🏆</div>
+      <div class="intro-char-badge">📊</div>
+      <div class="intro-char-badge">🚫</div>
+      <div class="intro-char-badge">♻️</div>
+      <div class="intro-char-badge">🔧</div>
+      <div class="intro-char-badge">🚀</div>
+    </div>
+    <button class="start-btn" id="btn-start">เริ่มทำ Quiz</button>
+    <div class="intro-foot" id="t-intro-foot">ใช้เวลาเพียง 1 นาที · Khon Tid Buak Roadshow</div>
+  </div>
+
+  <!-- QUIZ -->
+  <div class="screen" id="screen-quiz">
+    <div class="q-progress-dots" id="progress-dots"></div>
+    <div class="q-num-label" id="q-num-label">คำถามที่ 1 จาก 5</div>
+    <div class="q-text" id="q-text"></div>
+    <div class="q-options" id="q-options"></div>
+  </div>
+
+  <!-- QUIZ RESULT -->
+  <div class="screen" id="screen-result">
+    <div class="result-hero" id="result-hero">
+      <div class="result-emoji" id="result-emoji"></div>
+      <div class="result-label" id="t-result-label">คุณคือ คนติดบวก แบบ</div>
+      <div class="result-name" id="result-name"></div>
+      <div class="result-tagline" id="result-tagline"></div>
+    </div>
+    <div class="result-body">
+      <div class="result-desc" id="result-desc"></div>
+      <div class="result-traits" id="result-traits"></div>
+    </div>
+    <div class="result-actions">
+      <button class="result-btn primary" id="btn-result-play">🎮 เล่นภารกิจของฉันต่อ</button>
+      <button class="result-btn secondary" id="btn-result-retake">🔄 ทำ Quiz อีกครั้ง</button>
+    </div>
+  </div>
+
+  <!-- CHARACTER SELECT -->
+  <div class="screen" id="screen-select">
+    <img class="sel-logo" src="assets/07b88818-98ef-4b7c-845b-27f50b73c04f.png" alt="Khon Tid Buak">
+    <div class="sel-title" id="t-sel-title">รอบที่ 2: ภารกิจคนติดบวก</div>
+    <div class="sel-sub" id="t-sel-sub">เลือก Character เพื่อเล่นมินิเกมเฉพาะตัว<br>ใช้เวลาแค่ 1-2 นาที</div>
+    <div class="sel-grid" id="sel-grid">
+      <div class="sel-card" data-char="exceed">
+        <div class="sel-emoji">🏆</div>
+        <div class="sel-name" data-selname="">Exceed Standard</div>
+        <div class="sel-game" data-selgame="">เกมเติมเกจ</div>
+      </div>
+      <div class="sel-card" data-char="data">
+        <div class="sel-emoji">📊</div>
+        <div class="sel-name" data-selname="">Let Data Lead</div>
+        <div class="sel-game" data-selgame="">จับตัวเลขผิด</div>
+      </div>
+      <div class="sel-card" data-char="defect">
+        <div class="sel-emoji">🚫</div>
+        <div class="sel-name" data-selname="">Don't Send Defects</div>
+        <div class="sel-game" data-selgame="">ดักของเสีย</div>
+      </div>
+      <div class="sel-card" data-char="rework">
+        <div class="sel-emoji">♻️</div>
+        <div class="sel-name" data-selname="">Rework is Waste</div>
+        <div class="sel-game" data-selgame="">คัดงานดี-เสีย</div>
+      </div>
+      <div class="sel-card" data-char="fix">
+        <div class="sel-emoji">🔧</div>
+        <div class="sel-name" data-selname="">See it Broken, Fix it</div>
+        <div class="sel-game" data-selgame="">ตีจุดเสีย</div>
+      </div>
+      <div class="sel-card" data-char="newway">
+        <div class="sel-emoji">🚀</div>
+        <div class="sel-name" data-selname="">Find a New Way</div>
+        <div class="sel-game" data-selgame="">หาทางลัด</div>
+      </div>
+    </div>
+    <div class="sel-back-link" id="btn-sel-restart">↻ เริ่มต้นใหม่ทั้งหมด</div>
+  </div>
+
+  <!-- GAME 1: EXCEED STANDARD -->
+  <div class="screen" id="screen-exceed">
+    <div class="game-header" style="background:#C8860D">
+      <button class="game-back">←</button>
+      <div class="game-header-text">
+        <div class="game-title" data-gtitle="exceed">🏆 Exceed Standard</div>
+        <div class="game-sub" data-gsub="exceed">เติมเกจให้หยุดในโซนสีเขียว</div>
+      </div>
+      <div class="game-timer" id="exceed-tries">3 ครั้ง</div>
+    </div>
+    <div class="game-body">
+      <div class="game-instruction" data-ginstr="exceed">กดปุ่มค้างไว้เพื่อเติมเกจ ปล่อยให้หยุดตรงโซนเขียว (เกินมาตรฐานพอดี ไม่มากไม่น้อยเกินไป)</div>
+      <div class="gauge-wrap">
+        <div class="gauge-track">
+          <div class="gauge-target-zone" id="exceed-target-zone"></div>
+          <div class="gauge-fill" id="exceed-fill" style="height:0%"></div>
+        </div>
+        <button class="tap-btn" id="exceed-btn">กดค้างไว้</button>
+        <div class="gauge-score" id="exceed-score-text">โอกาสที่เหลือ: 3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME 2: LET DATA LEAD -->
+  <div class="screen" id="screen-data">
+    <div class="game-header" style="background:#1F6FB2">
+      <button class="game-back">←</button>
+      <div class="game-header-text">
+        <div class="game-title" data-gtitle="data">📊 Let Data Lead</div>
+        <div class="game-sub" data-gsub="data">หาตัวเลขที่ผิดปกติจากข้อมูล</div>
+      </div>
+      <div class="game-timer" id="data-round">รอบ 1/3</div>
+    </div>
+    <div class="game-body">
+      <div class="game-instruction" data-ginstr="data">แตะตัวเลขที่ "สูงผิดปกติ" เมื่อเทียบกับเพื่อนๆ ในกลุ่ม (Defect Rate %)</div>
+      <div class="data-grid" id="data-grid"></div>
+    </div>
+  </div>
+
+  <!-- GAME 3: DON'T SEND DEFECTS -->
+  <div class="screen" id="screen-defect">
+    <div class="game-header" style="background:#B23A3A">
+      <button class="game-back">←</button>
+      <div class="game-header-text">
+        <div class="game-title" data-gtitle="defect">🚫 Don't Send Defects</div>
+        <div class="game-sub" data-gsub="defect">แตะของเสียก่อนหลุดผ่านเส้นแดง!</div>
+      </div>
+      <div class="game-timer" id="defect-score">0 / 8</div>
+    </div>
+    <div class="game-body" style="padding-bottom:8px">
+      <div class="game-instruction" id="defect-instr"></div>
+      <div class="belt-wrap" id="belt-wrap" style="flex:1;min-height:280px">
+        <div class="belt-line" style="top:85%">เส้นอันตราย</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME 4: REWORK IS WASTE -->
+  <div class="screen" id="screen-rework">
+    <div class="game-header" style="background:#3B7A3B">
+      <button class="game-back">←</button>
+      <div class="game-header-text">
+        <div class="game-title" data-gtitle="rework">♻️ Rework is Waste</div>
+        <div class="game-sub" data-gsub="rework">คัดแยกงานที่ดีกับที่ต้องแก้</div>
+      </div>
+      <div class="game-timer" id="rework-round">1/5</div>
+    </div>
+    <div class="game-body">
+      <div class="game-instruction" data-ginstr="rework">ดูสถานการณ์ แล้วตัดสินใจว่า "ผ่านได้เลย" หรือ "ต้องแก้ไขใหม่"</div>
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+        <div class="sort-item" id="rework-emoji">👕</div>
+        <div style="text-align:center;font-size:14px;color:var(--text);margin-bottom:18px;min-height:40px" id="rework-scenario">กำลังโหลด...</div>
+        <div class="sort-buttons">
+          <button class="sort-btn good" id="btn-rework-good">✅ ผ่านได้เลย</button>
+          <button class="sort-btn redo" id="btn-rework-redo">🔁 ต้องแก้ไข</button>
+        </div>
+        <div class="sort-progress" id="rework-progress">คะแนน: 0/5</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME 5: SEE IT BROKEN, FIX IT -->
+  <div class="screen" id="screen-fix">
+    <div class="game-header" style="background:#A85A1E">
+      <button class="game-back">←</button>
+      <div class="game-header-text">
+        <div class="game-title" data-gtitle="fix">🔧 See it Broken, Fix it</div>
+        <div class="game-sub" data-gsub="fix">แตะจุดที่เสียให้เร็วที่สุด!</div>
+      </div>
+      <div class="game-timer" id="fix-score">0 แต้ม</div>
+    </div>
+    <div class="game-body">
+      <div class="game-instruction" id="fix-instr"></div>
+      <div class="whack-grid" id="whack-grid"></div>
+    </div>
+  </div>
+
+  <!-- GAME 6: FIND A NEW WAY -->
+  <div class="screen" id="screen-newway">
+    <div class="game-header" style="background:#6B4FA0">
+      <button class="game-back">←</button>
+      <div class="game-header-text">
+        <div class="game-title" data-gtitle="newway">🚀 Find a New Way</div>
+        <div class="game-sub" data-gsub="newway">หาทางลัดที่เร็วที่สุดไปเป้าหมาย</div>
+      </div>
+      <div class="game-timer" id="newway-step">ก้าวที่ 1/4</div>
+    </div>
+    <div class="game-body">
+      <div class="game-instruction" data-ginstr="newway">แตะช่องถัดไปที่ "ใกล้ 🎯 มากที่สุด" เพื่อหาทางลัดที่เร็วที่สุด</div>
+      <div class="path-grid" id="path-grid"></div>
+    </div>
+  </div>
+
+  <!-- GAME RESULT -->
+  <div class="screen" id="screen-gameresult">
+    <div class="gr-hero" id="gr-hero">
+      <div class="gr-emoji" id="gr-emoji"></div>
+      <div class="gr-title" id="gr-title"></div>
+      <div class="gr-sub" id="gr-sub"></div>
+      <div class="gr-score-box">
+        <div class="gr-score-num" id="gr-score-num"></div>
+        <div class="gr-score-label" id="t-gr-score-label">คะแนนที่ได้</div>
+      </div>
+    </div>
+    <div class="gr-actions">
+      <button class="gr-btn primary" id="btn-gr-prize">🎁 รับของที่ระลึก</button>
+      <button class="gr-btn secondary" id="btn-gr-other">🔄 เล่น Character อื่น</button>
+    </div>
+  </div>
+
+</div>
+
+<div id="toast"></div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const byId = id => document.getElementById(id);
+  let lang = localStorage.getItem('ktb_lang') || 'th';
+
+  /* ════════ CHARACTER META (language-independent) ════════ */
+  const CHAR_META = {
+    exceed:{emoji:'🏆',color:'#C8860D'},
+    data:  {emoji:'📊',color:'#1F6FB2'},
+    defect:{emoji:'🚫',color:'#B23A3A'},
+    rework:{emoji:'♻️',color:'#3B7A3B'},
+    fix:   {emoji:'🔧',color:'#A85A1E'},
+    newway:{emoji:'🚀',color:'#6B4FA0'}
+  };
+
+  /* ════════ I18N ════════ */
+  const I18N = {
+    th: {
+      ui: {
+        introTitle:'คุณคือ "คนติดบวก"<br>แบบไหน?',
+        introSub:'ตอบคำถาม 5 ข้อ เพื่อค้นหาว่าคุณ<br>มี DNA ใกล้เคียงกับ Character ไหนมากที่สุด<br>แล้วต่อด้วยมินิเกมเฉพาะตัว!',
+        startBtn:'เริ่มทำ Quiz',
+        introFoot:'ใช้เวลาเพียง 1 นาที · Khon Tid Buak Roadshow',
+        qNum:(n,t)=>`คำถามที่ ${n} จาก ${t}`,
+        resultLabel:'คุณคือ คนติดบวก แบบ',
+        resultPlay:'🎮 เล่นภารกิจของฉันต่อ',
+        resultRetake:'🔄 ทำ Quiz อีกครั้ง',
+        selTitle:'รอบที่ 2: ภารกิจคนติดบวก',
+        selSub:'เลือก Character เพื่อเล่นมินิเกมเฉพาะตัว<br>ใช้เวลาแค่ 1-2 นาที',
+        selRestart:'↻ เริ่มต้นใหม่ทั้งหมด',
+        recommend:'แนะนำ',
+        grScoreLabel:'คะแนนที่ได้',
+        grPrize:'🎁 รับของที่ระลึก',
+        grOther:'🔄 เล่น Character อื่น',
+        prizeToast:'🎁 รับสติกเกอร์ / ของที่ระลึกได้ที่บูธเลยค่ะ!'
+      },
+      questions:[
+        {text:'เมื่อคุณทำงานเสร็จตามมาตรฐานที่กำหนดแล้ว คุณมักจะ...',options:[
+          {label:'ลองดูว่าจะทำให้ดีขึ้นกว่ามาตรฐานได้อีกไหม',char:'exceed'},
+          {label:'เช็คตัวเลข/ข้อมูลย้อนหลังว่าทำได้ดีจริงไหม',char:'data'},
+          {label:'ตรวจสอบซ้ำให้ชัวร์ว่าไม่มีของเสียหลุดออกไป',char:'defect'},
+          {label:'คิดว่ามีวิธีทำให้เร็วขึ้นโดยไม่ต้องแก้งานซ้ำไหม',char:'rework'}]},
+        {text:'ถ้าเจอเครื่องจักรหรืออุปกรณ์มีปัญหาเล็กน้อย คุณจะ...',options:[
+          {label:'ลงมือซ่อมหรือแจ้งซ่อมทันที ไม่ปล่อยทิ้งไว้',char:'fix'},
+          {label:'คิดหาวิธีป้องกันไม่ให้เกิดปัญหาซ้ำอีก',char:'newway'},
+          {label:'บันทึกข้อมูลปัญหาไว้วิเคราะห์แนวโน้ม',char:'data'},
+          {label:'ตรวจสอบให้แน่ใจว่างานที่ทำไปแล้วไม่เสียหาย',char:'defect'}]},
+        {text:'เพื่อนร่วมงานชวนคุณลองวิธีทำงานแบบใหม่ คุณจะ...',options:[
+          {label:'สนใจทันที ชอบลองอะไรใหม่ๆ อยู่แล้ว',char:'newway'},
+          {label:'ขอดูข้อมูลหรือผลลัพธ์ก่อนว่าดีจริงไหม',char:'data'},
+          {label:'ลองได้ ถ้ามันช่วยลดงานที่ต้องทำซ้ำ',char:'rework'},
+          {label:'โอเค ถ้าวิธีนี้ทำให้ได้มาตรฐานสูงขึ้น',char:'exceed'}]},
+        {text:"สิ่งที่ทำให้คุณรู้สึก 'หงุดหงิดที่สุด' ในการทำงานคือ...",options:[
+          {label:'งานที่ต้องแก้ไขซ้ำๆ ทั้งที่ทำถูกตั้งแต่แรกได้',char:'rework'},
+          {label:'เห็นของเสียหลุดไปถึงขั้นตอนถัดไป',char:'defect'},
+          {label:'เห็นของพังแล้วไม่มีใครซ่อม ปล่อยไว้นานๆ',char:'fix'},
+          {label:'ใช้วิธีเดิมๆ ทั้งที่รู้ว่ามีทางที่ดีกว่า',char:'newway'}]},
+        {text:'ถ้าให้เลือกคำที่ใช่ที่สุดสำหรับตัวคุณ จะเป็นคำว่า...',options:[
+          {label:'มาตรฐาน ต้องดีกว่าเดิมเสมอ',char:'exceed'},
+          {label:'ตัวเลขไม่โกหก ฉันเชื่อข้อมูล',char:'data'},
+          {label:'เห็นปัญหาแล้วต้องลงมือทำ',char:'fix'},
+          {label:'ทำซ้ำคือเสียเวลา ทำให้ถูกตั้งแต่แรกดีกว่า',char:'rework'}]}
+      ],
+      chars:{
+        exceed:{name:'Exceed Standard',tagline:'คนที่ไม่เคยพอใจกับ "แค่ผ่าน"',desc:'คุณคือคนที่มองว่ามาตรฐานคือจุดเริ่มต้น ไม่ใช่เส้นชัย ทุกงานที่ผ่านมือคุณจะถูกผลักดันให้ดีกว่าที่กำหนดไว้เสมอ เพื่อนร่วมงานมักมองคุณเป็นแรงบันดาลใจในการพัฒนาตัวเอง',traits:['ใส่ใจรายละเอียด','ไม่หยุดพัฒนา','ตั้งมาตรฐานสูง']},
+        data:{name:'Let Data Lead',tagline:'คนที่ให้ตัวเลขพูดแทนความรู้สึก',desc:'คุณคือคนที่ตัดสินใจด้วยข้อมูลและข้อเท็จจริง ไม่ใช่ความรู้สึกหรือสมมติฐาน คุณช่วยให้ทีมมองเห็นปัญหาที่แท้จริงและตัดสินใจได้แม่นยำขึ้นในทุกสถานการณ์',traits:['มีเหตุผล','เชื่อถือได้','วิเคราะห์เก่ง']},
+        defect:{name:"Don't Send Defects",tagline:'ด่านสุดท้ายก่อนของเสียจะหลุดไป',desc:'คุณคือคนที่มีความรับผิดชอบสูงมาก ไม่ยอมให้งานที่ไม่สมบูรณ์ผ่านมือไปสู่ขั้นตอนถัดไปเด็ดขาด การมีคนแบบคุณในทีมทำให้คุณภาพงานโดยรวมดีขึ้นอย่างชัดเจน',traits:['ละเอียดรอบคอบ','รับผิดชอบสูง','รักษาคุณภาพ']},
+        rework:{name:'Rework is Waste',tagline:'ทำให้ถูกตั้งแต่ครั้งแรก ดีกว่าทำซ้ำ',desc:'คุณคือคนที่มองเห็นคุณค่าของเวลาและทรัพยากร คุณเชื่อว่าการทำงานให้ถูกต้องตั้งแต่ครั้งแรกสำคัญกว่าการรีบทำแล้วมาแก้ไขทีหลัง ทำให้ทีมทำงานได้อย่างมีประสิทธิภาพมากขึ้น',traits:['มีประสิทธิภาพ','วางแผนดี','ประหยัดทรัพยากร']},
+        fix:{name:'See it Broken, Fix it',tagline:'เห็นปัญหาแล้วลงมือทันที',desc:'คุณคือคนที่ไม่ปล่อยให้ปัญหาเล็กๆ กลายเป็นปัญหาใหญ่ เมื่อเห็นสิ่งที่ไม่ถูกต้อง คุณลงมือแก้ไขทันทีโดยไม่รอให้ใครสั่ง ความกระตือรือร้นแบบนี้คือหัวใจของทีมที่แข็งแกร่ง',traits:['ลงมือทำจริง','กระตือรือร้น','ไม่ผัดวันประกันพรุ่ง']},
+        newway:{name:'Find a New Way',tagline:'ไม่เคยหยุดมองหาทางที่ดีกว่า',desc:'คุณคือคนที่กล้าตั้งคำถามกับวิธีการเดิมๆ และมองหาทางออกใหม่ๆ อยู่เสมอ ความคิดสร้างสรรค์ของคุณช่วยผลักดันให้ทีมและองค์กรพัฒนาไปข้างหน้าอย่างไม่หยุดนิ่ง',traits:['คิดสร้างสรรค์','กล้าเปลี่ยนแปลง','มองไปข้างหน้า']}
+      },
+      games:{
+        exceed:{sub:'เติมเกจให้หยุดในโซนสีเขียว',instr:'กดปุ่มค้างไว้เพื่อเติมเกจ ปล่อยให้หยุดตรงโซนเขียว (เกินมาตรฐานพอดี ไม่มากไม่น้อยเกินไป)',hold:'กดค้างไว้',selgame:'เกมเติมเกจ',
+          tries:n=>n+' ครั้ง',remain:n=>'โอกาสที่เหลือ: '+n,hit:b=>'🎯 เข้าโซน! สำเร็จ '+b+' ครั้ง',miss:'❌ ไม่เข้าโซน ลองอีกครั้ง',
+          winT:'เกินมาตรฐานสำเร็จ!',winS:'คุณควบคุมเกจได้แม่นยำ สมกับเป็น Exceed Standard ตัวจริง',loseT:'เกือบแล้ว!',loseS:'การเติมเกจให้พอดีไม่ใช่เรื่องง่าย แต่คุณก็มีจิตวิญญาณนักพัฒนา!',score:b=>b+' / 3 ครั้ง'},
+        data:{sub:'หาตัวเลขที่ผิดปกติจากข้อมูล',instr:'แตะตัวเลขที่ "สูงผิดปกติ" เมื่อเทียบกับเพื่อนๆ ในกลุ่ม (Defect Rate %)',selgame:'จับตัวเลขผิด',
+          round:(c,t)=>`รอบ ${c}/${t}`,line:i=>'Line '+i,resT:'วิเคราะห์เก่งมาก!',resS:'คุณหาความผิดปกติของข้อมูลได้แม่นยำ สมกับเป็น Let Data Lead',score:s=>s+' / 3 ข้อ'},
+        defect:{sub:'แตะของเสียก่อนหลุดผ่านเส้นแดง!',instr:t=>`แตะสินค้าที่มีตำหนิ ❌ เท่านั้น ปล่อยสินค้าดี ✅ ผ่านไป! เวลา ${t}s`,selgame:'ดักของเสีย',danger:'เส้นอันตราย',
+          score:s=>s+' / 8',winT:'ด่านคุณภาพสุดแกร่ง!',loseT:'ฝึกฝนอีกนิดนะ!',resS:s=>'คุณดักของเสียได้ '+s+" ชิ้น สมกับเป็น Don't Send Defects",scoreFmt:s=>s+' / 8 ชิ้น'},
+        rework:{sub:'คัดแยกงานที่ดีกับที่ต้องแก้',instr:'ดูสถานการณ์ แล้วตัดสินใจว่า "ผ่านได้เลย" หรือ "ต้องแก้ไขใหม่"',selgame:'คัดงานดี-เสีย',good:'✅ ผ่านได้เลย',redo:'🔁 ต้องแก้ไข',
+          round:c=>c+'/5',score:s=>'คะแนน: '+s+'/5',winT:'คัดแยกแม่นมาก!',okT:'ใช้ได้เลย!',resS:s=>'คุณตัดสินใจถูก '+s+' จาก 5 สถานการณ์ สมกับเป็น Rework is Waste',scoreFmt:s=>s+' / 5 ข้อ',
+          scenarios:[
+            {emoji:'👕',text:'เย็บตะเข็บเสร็จแล้ว ตรวจดูตรงและแน่นดี',answer:true},
+            {emoji:'🧵',text:'ด้ายหลุดเป็นบางจุด เห็นชัดเจนเมื่อมองใกล้',answer:false},
+            {emoji:'👖',text:'ติดป้าย Size ผิดตำแหน่งที่กำหนด',answer:false},
+            {emoji:'🧥',text:'ซิปรูดลื่นดี ตะเข็บเรียบร้อยตามมาตรฐาน',answer:true},
+            {emoji:'👔',text:'รอยเปื้อนเล็กๆ ที่ไม่สามารถซักออกได้',answer:false}]},
+        fix:{sub:'แตะจุดที่เสียให้เร็วที่สุด!',instr:t=>`แตะ 🔧 ที่ปรากฏให้เร็วที่สุด ภายใน ${t}s`,selgame:'ตีจุดเสีย',
+          score:s=>s+' แต้ม',winT:'มือไวสุดๆ!',okT:'ลงมือไวดี!',resS:s=>'คุณซ่อมจุดเสียได้ '+s+' ครั้ง สมกับเป็น See it Broken, Fix it',scoreFmt:s=>s+' แต้ม'},
+        newway:{sub:'หาทางลัดที่เร็วที่สุดไปเป้าหมาย',instr:'แตะช่องถัดไปที่ "ใกล้ 🎯 มากที่สุด" เพื่อหาทางลัดที่เร็วที่สุด',selgame:'หาทางลัด',
+          step:c=>`ก้าวที่ ${c}/4`,resT:'เจอทางลัดแล้ว!',resS:'คุณหาเส้นทางที่เร็วที่สุดได้ครบทุกก้าว สมกับเป็น Find a New Way',score:'4 / 4 ก้าว'}
+      }
+    },
+
+    en: {
+      ui: {
+        introTitle:'Which "Khon Tid Buak"<br>are you?',
+        introSub:'Answer 5 questions to find which<br>character your DNA matches most —<br>then play your own mini-game!',
+        startBtn:'Start Quiz',
+        introFoot:'Just 1 minute · Khon Tid Buak Roadshow',
+        qNum:(n,t)=>`Question ${n} of ${t}`,
+        resultLabel:'You are a Khon Tid Buak of type',
+        resultPlay:'🎮 Play my mission',
+        resultRetake:'🔄 Retake Quiz',
+        selTitle:'Round 2: Khon Tid Buak Missions',
+        selSub:'Pick a character to play its mini-game<br>Just 1–2 minutes',
+        selRestart:'↻ Restart everything',
+        recommend:'Pick',
+        grScoreLabel:'Your score',
+        grPrize:'🎁 Claim your gift',
+        grOther:'🔄 Play another character',
+        prizeToast:'🎁 Collect your sticker / souvenir at the booth!'
+      },
+      questions:[
+        {text:"Once you've finished a task to standard, you usually…",options:[
+          {label:'Look for ways to push it beyond the standard',char:'exceed'},
+          {label:'Check past data to confirm it was really good',char:'data'},
+          {label:'Double-check that no defects slipped through',char:'defect'},
+          {label:'Think about doing it faster without rework',char:'rework'}]},
+        {text:'If a machine or tool has a minor issue, you…',options:[
+          {label:'Fix it or report it right away — never leave it',char:'fix'},
+          {label:'Find a way to stop it from happening again',char:'newway'},
+          {label:'Log the issue to analyze the trend',char:'data'},
+          {label:'Make sure finished work is not affected',char:'defect'}]},
+        {text:'A colleague invites you to try a new way of working. You…',options:[
+          {label:'Get interested at once — you love new things',char:'newway'},
+          {label:'Ask to see the data or results first',char:'data'},
+          {label:'Sure, if it cuts down rework',char:'rework'},
+          {label:'OK, if it raises the standard',char:'exceed'}]},
+        {text:'What frustrates you most at work is…',options:[
+          {label:'Redoing work that could have been right the first time',char:'rework'},
+          {label:'Seeing defects pass to the next step',char:'defect'},
+          {label:'Seeing something broken left unfixed for ages',char:'fix'},
+          {label:'Using the same old way when a better one exists',char:'newway'}]},
+        {text:'If you had to pick the phrase that fits you best…',options:[
+          {label:'A standard must always beat the last one',char:'exceed'},
+          {label:"Numbers don't lie — I trust the data",char:'data'},
+          {label:'See a problem, take action',char:'fix'},
+          {label:'Rework wastes time — get it right first',char:'rework'}]}
+      ],
+      chars:{
+        exceed:{name:'Exceed Standard',tagline:'Never satisfied with just "passing"',desc:'You see the standard as a starting line, not a finish line. Everything you touch gets pushed beyond spec. Colleagues look to you as inspiration to keep improving.',traits:['Detail-oriented','Always improving','Sets high bars']},
+        data:{name:'Let Data Lead',tagline:'Lets the numbers speak instead of feelings',desc:'You decide with data and facts, not feelings or assumptions. You help the team see the real problem and make sharper decisions in any situation.',traits:['Logical','Reliable','Strong analyst']},
+        defect:{name:"Don't Send Defects",tagline:'The last line before defects escape',desc:'You have a very strong sense of responsibility and never let incomplete work pass to the next step. Having someone like you clearly raises overall quality.',traits:['Meticulous','Highly responsible','Quality guardian']},
+        rework:{name:'Rework is Waste',tagline:'Do it right the first time',desc:'You value time and resources. You believe doing it right the first time beats rushing and fixing later, making the team far more efficient.',traits:['Efficient','Plans ahead','Saves resources']},
+        fix:{name:'See it Broken, Fix it',tagline:'See a problem, act immediately',desc:'You never let small problems grow into big ones. When you see something wrong you fix it at once without waiting to be told. That drive is the heart of a strong team.',traits:['Hands-on','Proactive','No procrastination']},
+        newway:{name:'Find a New Way',tagline:'Always looking for a better way',desc:'You dare to question the old ways and constantly seek new solutions. Your creativity keeps pushing the team and the organization forward without standing still.',traits:['Creative','Embraces change','Forward-looking']}
+      },
+      games:{
+        exceed:{sub:'Stop the gauge in the green zone',instr:'Hold the button to fill the gauge. Release so it stops right in the green zone — exceed the standard, not too much, not too little.',hold:'Hold',selgame:'Fill the gauge',
+          tries:n=>n+' tries',remain:n=>'Tries left: '+n,hit:b=>'🎯 In zone! '+b+' hits',miss:'❌ Missed, try again',
+          winT:'Standard exceeded!',winS:'You control the gauge precisely — a true Exceed Standard.',loseT:'So close!',loseS:'Hitting the gauge just right is hard, but you have the spirit of an improver!',score:b=>b+' / 3'},
+        data:{sub:'Spot the abnormal number',instr:'Tap the number that is "abnormally high" compared to the others (Defect Rate %)',selgame:'Spot the odd number',
+          round:(c,t)=>`Round ${c}/${t}`,line:i=>'Line '+i,resT:'Sharp analysis!',resS:'You spotted the data anomalies precisely — a true Let Data Lead.',score:s=>s+' / 3'},
+        defect:{sub:'Tap defects before they cross the red line!',instr:t=>`Tap only defective items ❌, let good ones ✅ pass! Time ${t}s`,selgame:'Catch defects',danger:'Danger line',
+          score:s=>s+' / 8',winT:'Quality gate champion!',loseT:'A little more practice!',resS:s=>'You caught '+s+" defects — a true Don't Send Defects.",scoreFmt:s=>s+' / 8'},
+        rework:{sub:'Sort good work from rework',instr:'Read the situation, then decide "Pass" or "Needs rework"',selgame:'Sort good vs defect',good:'✅ Pass',redo:'🔁 Needs rework',
+          round:c=>c+'/5',score:s=>'Score: '+s+'/5',winT:'Very accurate sorting!',okT:'Not bad!',resS:s=>'You decided right on '+s+' of 5 — a true Rework is Waste.',scoreFmt:s=>s+' / 5',
+          scenarios:[
+            {emoji:'👕',text:'Seam sewn and checked — straight and tight.',answer:true},
+            {emoji:'🧵',text:'Loose threads in places, clearly visible up close.',answer:false},
+            {emoji:'👖',text:'Size label placed in the wrong position.',answer:false},
+            {emoji:'🧥',text:'Zipper runs smoothly, seams neat to standard.',answer:true},
+            {emoji:'👔',text:'A small stain that cannot be washed out.',answer:false}]},
+        fix:{sub:'Tap the broken spot as fast as you can!',instr:t=>`Tap the 🔧 as fast as you can within ${t}s`,selgame:'Whack the fault',
+          score:s=>s+' pts',winT:'Lightning hands!',okT:'Quick to act!',resS:s=>'You fixed '+s+' faults — a true See it Broken, Fix it.',scoreFmt:s=>s+' pts'},
+        newway:{sub:'Find the fastest shortcut to the goal',instr:'Tap the next cell that is "closest to 🎯" to find the fastest shortcut',selgame:'Find the shortcut',
+          step:c=>`Step ${c}/4`,resT:'Shortcut found!',resS:'You found the fastest route every step — a true Find a New Way.',score:'4 / 4 steps'}
+      }
+    },
+
+    my: {
+      ui: {
+        introTitle:'သင်ဟာ ဘယ်လို<br>"Khon Tid Buak" လဲ?',
+        introSub:'မေးခွန်း ၅ ခု ဖြေပြီး သင်နဲ့<br>အကိုက်ညီဆုံး Character ကို ရှာပါ —<br>ပြီးရင် ကိုယ်ပိုင် mini-game ကစားပါ!',
+        startBtn:'Quiz စတင်ပါ',
+        introFoot:'၁ မိနစ်သာ · Khon Tid Buak Roadshow',
+        qNum:(n,t)=>`မေးခွန်း ${n} / ${t}`,
+        resultLabel:'သင်ဟာ ဒီအမျိုးအစား Khon Tid Buak',
+        resultPlay:'🎮 ကျွန်ုပ်၏ mission ကစားရန်',
+        resultRetake:'🔄 Quiz ပြန်ဖြေရန်',
+        selTitle:'အဆင့် ၂: Khon Tid Buak Missions',
+        selSub:'Character ရွေးပြီး mini-game ကစားပါ<br>၁–၂ မိနစ်သာ',
+        selRestart:'↻ အစက ပြန်စရန်',
+        recommend:'အကြံပြု',
+        grScoreLabel:'သင့်ရမှတ်',
+        grPrize:'🎁 လက်ဆောင် ယူရန်',
+        grOther:'🔄 အခြား Character ကစားရန်',
+        prizeToast:'🎁 booth မှာ စတစ်ကာ / အမှတ်တရ ပစ္စည်း လာယူပါ!'
+      },
+      questions:[
+        {text:'စံအတိုင်း အလုပ်ပြီးသွားရင် သင်က များသောအားဖြင့်…',options:[
+          {label:'စံထက် ပိုကောင်းအောင် လုပ်လို့ရမလား ကြည့်တယ်',char:'exceed'},
+          {label:'ဒေတာတွေ ပြန်စစ်ပြီး တကယ်ကောင်းရဲ့လား ကြည့်တယ်',char:'data'},
+          {label:'ချို့ယွင်းချက် မလွတ်အောင် ထပ်စစ်တယ်',char:'defect'},
+          {label:'ပြန်ပြင်စရာမလိုဘဲ ပိုမြန်အောင် လုပ်နည်းရှာတယ်',char:'rework'}]},
+        {text:'စက် (သို့) ကိရိယာ အသေးအဖွဲ ပြဿနာရှိရင် သင်က…',options:[
+          {label:'ချက်ချင်း ပြင် (သို့) အကြောင်းကြားတယ်၊ မထားဘူး',char:'fix'},
+          {label:'ထပ်မဖြစ်အောင် ကာကွယ်နည်း ရှာတယ်',char:'newway'},
+          {label:'လမ်းကြောင်း ခွဲခြမ်းဖို့ ပြဿနာကို မှတ်ထားတယ်',char:'data'},
+          {label:'ပြီးသွားတဲ့ အလုပ် မပျက်အောင် သေချာစစ်တယ်',char:'defect'}]},
+        {text:'လုပ်ဖော်ကိုင်ဖက်က နည်းလမ်းသစ် စမ်းဖို့ ဖိတ်ရင် သင်က…',options:[
+          {label:'ချက်ချင်း စိတ်ဝင်စားတယ်၊ အသစ်စမ်းရတာ ကြိုက်တယ်',char:'newway'},
+          {label:'ဒေတာ (သို့) ရလဒ်ကို အရင်ကြည့်ချင်တယ်',char:'data'},
+          {label:'ပြန်ပြင်ရတာ လျှော့ရင် စမ်းမယ်',char:'rework'},
+          {label:'စံ ပိုမြင့်လာရင် ကောင်းတာပေါ့',char:'exceed'}]},
+        {text:'အလုပ်မှာ အ‌များဆုံး စိတ်ညစ်စေတာက…',options:[
+          {label:'ပထမကတည်းက မှန်နိုင်ပါလျက် ထပ်ပြင်ရတဲ့ အလုပ်',char:'rework'},
+          {label:'ချို့ယွင်းချက်တွေ နောက်အဆင့်ကို လွတ်သွားတာ',char:'defect'},
+          {label:'ပျက်နေတာ တွေ့ရက်နဲ့ ဘယ်သူမှ မပြင်ဘဲ ထားတာ',char:'fix'},
+          {label:'ပိုကောင်းတဲ့နည်း ရှိမှန်းသိရက်နဲ့ နည်းဟောင်းသုံးတာ',char:'newway'}]},
+        {text:'သင်နဲ့ အကိုက်ညီဆုံး စကားစုကို ရွေးရရင်…',options:[
+          {label:'စံဆိုတာ အရင်ထက် အမြဲ ပိုကောင်းရမယ်',char:'exceed'},
+          {label:'ဂဏန်းတွေ မလိမ်ဘူး၊ ဒေတာကို ယုံတယ်',char:'data'},
+          {label:'ပြဿနာတွေ့ရင် လက်တွေ့လုပ်',char:'fix'},
+          {label:'ပြန်ပြင်တာ အချိန်ကုန်၊ ပထမကတည်းက မှန်အောင်လုပ်',char:'rework'}]}
+      ],
+      chars:{
+        exceed:{name:'Exceed Standard',tagline:'"အောင်ရုံ" နဲ့ ဘယ်တော့မှ မကျေနပ်သူ',desc:'စံချိန်ဆိုတာ အဆုံးမှတ်မဟုတ်ဘဲ စတင်မှတ်အဖြစ် မြင်သူပါ။ သင်လုပ်တဲ့ အလုပ်တိုင်း သတ်မှတ်ချက်ထက် ပိုကောင်းအောင် တွန်းအားပေးတယ်။ လုပ်ဖော်ကိုင်ဖက်တွေက သင့်ကို တိုးတက်မှုအတွက် စံနမူနာအဖြစ် မြင်ကြတယ်။',traits:['အသေးစိတ်ဂရုစိုက်','အမြဲတိုးတက်','စံမြင့်သတ်မှတ်']},
+        data:{name:'Let Data Lead',tagline:'ဂဏန်းတွေကို စကားပြောစေသူ',desc:'ခံစားချက် မဟုတ်ဘဲ ဒေတာနဲ့ အချက်အလက်နဲ့ ဆုံးဖြတ်သူပါ။ အဖွဲ့ကို တကယ့်ပြဿနာ မြင်စေပြီး မည်သည့်အခြေအနေမှာမဆို ဆုံးဖြတ်ချက် ပိုတိကျစေတယ်။',traits:['ကျိုးကြောင်းဆီလျော်','ယုံကြည်ရ','ခွဲခြမ်းစိတ်ဖြာတော်']},
+        defect:{name:"Don't Send Defects",tagline:'ချို့ယွင်းချက်တွေ မလွတ်ခင် နောက်ဆုံးတံတိုင်း',desc:'တာဝန်သိစိတ် အလွန်မြင့်ပြီး မပြီးပြတ်တဲ့ အလုပ်ကို နောက်အဆင့်ကို ဘယ်တော့မှ မလွှတ်ပေးဘူး။ သင်လို လူရှိရင် အလုံးစုံ အရည်အသွေး သိသိသာသာ တိုးတက်တယ်။',traits:['သေချာစေ့စပ်','တာဝန်သိစိတ်မြင့်','အရည်အသွေးထိန်း']},
+        rework:{name:'Rework is Waste',tagline:'ပထမအကြိမ်မှာ မှန်အောင်လုပ်ပါ',desc:'အချိန်နဲ့ အရင်းအမြစ်ရဲ့ တန်ဖိုးကို မြင်သူပါ။ အလျင်စလို လုပ်ပြီး နောက်မှ ပြင်တာထက် ပထမအကြိမ်မှာ မှန်အောင်လုပ်တာ ပိုကောင်းတယ်လို့ ယုံကြည်တယ်။ ဒါက အဖွဲ့ကို ပိုထိရောက်စေတယ်။',traits:['ထိရောက်','ကြိုတင်စီစဉ်','အရင်းအမြစ်ချွေတာ']},
+        fix:{name:'See it Broken, Fix it',tagline:'ပြဿနာတွေ့ရင် ချက်ချင်းလုပ်',desc:'ပြဿနာသေးသေးတွေ ကြီးမလာအောင် ဘယ်တော့မှ မထားဘူး။ မှားနေတာ တွေ့ရင် တစ်ယောက်ယောက် ပြောမှ မဟုတ်ဘဲ ချက်ချင်း ပြင်တယ်။ ဒီစိတ်အားထက်သန်မှုဟာ အဖွဲ့ခိုင်မာမှုရဲ့ အသည်းနှလုံးပါ။',traits:['လက်တွေ့လုပ်','တက်ကြွ','မရွှေ့ဆိုင်း']},
+        newway:{name:'Find a New Way',tagline:'ပိုကောင်းတဲ့နည်းလမ်း အမြဲရှာ',desc:'ဟောင်းနွမ်းတဲ့ နည်းလမ်းတွေကို မေးခွန်းထုတ်ဖို့ ရဲဝံ့ပြီး နည်းလမ်းသစ်တွေ အမြဲရှာတယ်။ သင့်ဖန်တီးနိုင်စွမ်းဟာ အဖွဲ့နဲ့ အဖွဲ့အစည်းကို ရပ်တန့်မနေဘဲ ရှေ့ဆက်တွန်းအားပေးတယ်။',traits:['ဖန်တီးနိုင်','ပြောင်းလဲမှုလက်ခံ','ရှေ့မျှော်']}
+      },
+      games:{
+        exceed:{sub:'ဂိတ်ကို အစိမ်းရောင်ဇုန်မှာ ရပ်ပါ',instr:'ဂိတ်ဖြည့်ဖို့ ခလုတ်ကို ဖိထားပါ။ အစိမ်းရောင်ဇုန်မှာ အတိအကျ ရပ်အောင် လွှတ်ပါ — အလွန်အကျွံ မဟုတ်ဘဲ စံကို ကျော်ပါ။',hold:'ဖိထားပါ',selgame:'ဂိတ်ဖြည့်ဂိမ်း',
+          tries:n=>n+' ကြိမ်',remain:n=>'ကျန်: '+n,hit:b=>'🎯 ဇုန်ထဲ! '+b+' ကြိမ်',miss:'❌ မမှန်၊ ထပ်ကြိုးစား',
+          winT:'စံကို ကျော်ပြီ!',winS:'ဂိတ်ကို တိတိကျကျ ထိန်းနိုင်တယ် — တကယ့် Exceed Standard ပါ။',loseT:'နီးသွားပြီ!',loseS:'ဂိတ်ကို အတိအကျ ထိအောင် မလွယ်ပေမယ့် တိုးတက်လိုစိတ် ပြည့်နေတယ်!',score:b=>b+' / 3'},
+        data:{sub:'ပုံမှန်မဟုတ်တဲ့ ဂဏန်းကို ရှာပါ',instr:'အခြားသူတွေနဲ့ နှိုင်းရင် "ပုံမှန်မဟုတ် မြင့်နေတဲ့" ဂဏန်းကို တို့ပါ (Defect Rate %)',selgame:'ဂဏန်းမှား ဖမ်း',
+          round:(c,t)=>`အဆင့် ${c}/${t}`,line:i=>'Line '+i,resT:'ခွဲခြမ်းမှု ထက်မြက်တယ်!',resS:'ဒေတာ မမှန်ကန်မှုကို တိကျစွာ ရှာနိုင်တယ် — တကယ့် Let Data Lead ပါ။',score:s=>s+' / 3'},
+        defect:{sub:'အနီရောင်မျဉ်း မကျော်ခင် ချို့ယွင်းချက်ကို တို့ပါ!',instr:t=>`ချို့ယွင်းတဲ့ပစ္စည်း ❌ ကိုသာ တို့ပါ၊ ကောင်းတဲ့ ✅ ကို လွှတ်ပါ! အချိန် ${t}s`,selgame:'ချို့ယွင်းချက် ဖမ်း',danger:'အန္တရာယ်မျဉ်း',
+          score:s=>s+' / 8',winT:'အရည်အသွေး ဂိတ် ခိုင်မာတယ်!',loseT:'နည်းနည်း ထပ်လေ့ကျင့်ပါ!',resS:s=>'ချို့ယွင်းချက် '+s+" ခု ဖမ်းနိုင်တယ် — တကယ့် Don't Send Defects ပါ။",scoreFmt:s=>s+' / 8'},
+        rework:{sub:'ကောင်းတဲ့အလုပ်နဲ့ ပြင်ရမယ့်အလုပ် ခွဲပါ',instr:'အခြေအနေကို ကြည့်ပြီး "ဖြတ်လို့ရ" (သို့) "ပြန်ပြင်ရမယ်" ဆုံးဖြတ်ပါ',selgame:'ကောင်း-ချို့ ခွဲ',good:'✅ ဖြတ်လို့ရ',redo:'🔁 ပြန်ပြင်ရမယ်',
+          round:c=>c+'/5',score:s=>'ရမှတ်: '+s+'/5',winT:'ခွဲခြားမှု တိကျတယ်!',okT:'ကောင်းပါတယ်!',resS:s=>'အခြေအနေ ၅ ခုမှ '+s+' ခု မှန်တယ် — တကယ့် Rework is Waste ပါ။',scoreFmt:s=>s+' / 5',
+          scenarios:[
+            {emoji:'👕',text:'ချုပ်ရိုးပြီးပြီ၊ ဖြောင့်ပြီး တင်းကျပ်တယ်။',answer:true},
+            {emoji:'🧵',text:'အပ်ချည် တချို့နေရာ ပြုတ်နေ၊ နီးနီးကြည့်ရင် ထင်ရှား။',answer:false},
+            {emoji:'👖',text:'Size တံဆိပ် နေရာမှား ကပ်ထားတယ်။',answer:false},
+            {emoji:'🧥',text:'ဇစ် ချောချောမွေ့မွေ့ ဆွဲလို့ရ၊ ချုပ်ရိုး စံအတိုင်း သန့်ရှင်း။',answer:true},
+            {emoji:'👔',text:'မဆေးထွက်နိုင်တဲ့ အစွန်းအထင်း သေးသေး။',answer:false}]},
+        fix:{sub:'ပျက်နေတဲ့နေရာကို အမြန်ဆုံး တို့ပါ!',instr:t=>`ပေါ်လာတဲ့ 🔧 ကို ${t}s အတွင်း အမြန်ဆုံး တို့ပါ`,selgame:'ပျက်ရာ ရိုက်',
+          score:s=>s+' မှတ်',winT:'လက် မြန်လိုက်တာ!',okT:'အရှိန်ကောင်းတယ်!',resS:s=>'ပျက်ရာ '+s+' ကြိမ် ပြင်နိုင်တယ် — တကယ့် See it Broken, Fix it ပါ။',scoreFmt:s=>s+' မှတ်'},
+        newway:{sub:'ပန်းတိုင်ကို အမြန်ဆုံး ဖြတ်လမ်း ရှာပါ',instr:'"🎯 အနီးဆုံး" အကွက်ကို တို့ပြီး အမြန်ဆုံး ဖြတ်လမ်း ရှာပါ',selgame:'ဖြတ်လမ်း ရှာ',
+          step:c=>`ခြေလှမ်း ${c}/4`,resT:'ဖြတ်လမ်း တွေ့ပြီ!',resS:'ခြေလှမ်းတိုင်း အမြန်ဆုံးလမ်း ရှာနိုင်တယ် — တကယ့် Find a New Way ပါ။',score:'4 / 4 ခြေလှမ်း'}
+      }
+    },
+
+    lo: {
+      ui: {
+        introTitle:'ເຈົ້າເປັນ "Khon Tid Buak"<br>ແບບໃດ?',
+        introSub:'ຕອບ 5 ຄຳຖາມ ເພື່ອຄົ້ນຫາວ່າ<br>DNA ຂອງເຈົ້າໃກ້ຄຽງກັບ Character ໃດທີ່ສຸດ<br>ແລ້ວຫຼິ້ນມິນິເກມສະເພາະຕົວ!',
+        startBtn:'ເລີ່ມເຮັດ Quiz',
+        introFoot:'ໃຊ້ເວລາພຽງ 1 ນາທີ · Khon Tid Buak Roadshow',
+        qNum:(n,t)=>`ຄຳຖາມທີ ${n} ຈາກ ${t}`,
+        resultLabel:'ເຈົ້າແມ່ນ Khon Tid Buak ແບບ',
+        resultPlay:'🎮 ຫຼິ້ນພາລະກິດຂອງຂ້ອຍຕໍ່',
+        resultRetake:'🔄 ເຮັດ Quiz ອີກຄັ້ງ',
+        selTitle:'ຮອບທີ 2: ພາລະກິດ Khon Tid Buak',
+        selSub:'ເລືອກ Character ເພື່ອຫຼິ້ນມິນິເກມສະເພາະຕົວ<br>ໃຊ້ເວລາພຽງ 1–2 ນາທີ',
+        selRestart:'↻ ເລີ່ມຕົ້ນໃໝ່ທັງໝົດ',
+        recommend:'ແນະນຳ',
+        grScoreLabel:'ຄະແນນທີ່ໄດ້',
+        grPrize:'🎁 ຮັບຂອງທີ່ລະນຶກ',
+        grOther:'🔄 ຫຼິ້ນ Character ອື່ນ',
+        prizeToast:'🎁 ຮັບສະຕິກເກີ / ຂອງທີ່ລະນຶກໄດ້ທີ່ບູດ!'
+      },
+      questions:[
+        {text:'ເມື່ອເຈົ້າເຮັດວຽກສຳເລັດຕາມມາດຕະຖານແລ້ວ ສ່ວນໃຫຍ່ເຈົ້າຈະ...',options:[
+          {label:'ລອງເບິ່ງວ່າຈະເຮັດໃຫ້ດີກວ່າມາດຕະຖານໄດ້ອີກບໍ່',char:'exceed'},
+          {label:'ກວດເບິ່ງຕົວເລກ/ຂໍ້ມູນຍ້ອນຫຼັງວ່າເຮັດໄດ້ດີແທ້ບໍ່',char:'data'},
+          {label:'ກວດຊ້ຳໃຫ້ແນ່ໃຈວ່າບໍ່ມີຂອງເສຍຫຼຸດອອກໄປ',char:'defect'},
+          {label:'ຄິດຫາວິທີເຮັດໃຫ້ໄວຂຶ້ນໂດຍບໍ່ຕ້ອງແກ້ວຽກຊ້ຳ',char:'rework'}]},
+        {text:'ຖ້າພົບວ່າເຄື່ອງຈັກ ຫຼື ອຸປະກອນມີບັນຫາເລັກນ້ອຍ ເຈົ້າຈະ...',options:[
+          {label:'ລົງມືສ້ອມ ຫຼື ແຈ້ງສ້ອມທັນທີ ບໍ່ປ່ອຍຖິ້ມໄວ້',char:'fix'},
+          {label:'ຄິດຫາວິທີປ້ອງກັນບໍ່ໃຫ້ບັນຫາເກີດຊ້ຳ',char:'newway'},
+          {label:'ບັນທຶກຂໍ້ມູນບັນຫາໄວ້ເພື່ອວິເຄາະແນວໂນ້ມ',char:'data'},
+          {label:'ກວດໃຫ້ແນ່ໃຈວ່າວຽກທີ່ເຮັດແລ້ວບໍ່ເສຍຫາຍ',char:'defect'}]},
+        {text:'ເພື່ອນຮ່ວມງານຊວນໃຫ້ລອງວິທີເຮັດວຽກແບບໃໝ່ ເຈົ້າຈະ...',options:[
+          {label:'ສົນໃຈທັນທີ ເພາະມັກລອງສິ່ງໃໝ່ໆ',char:'newway'},
+          {label:'ຂໍເບິ່ງຂໍ້ມູນ ຫຼື ຜົນລັບກ່ອນວ່າດີແທ້ບໍ່',char:'data'},
+          {label:'ລອງໄດ້ ຖ້າຊ່ວຍຫຼຸດວຽກທີ່ຕ້ອງເຮັດຊ້ຳ',char:'rework'},
+          {label:'ຕົກລົງ ຖ້າວິທີນີ້ເຮັດໃຫ້ມາດຕະຖານສູງຂຶ້ນ',char:'exceed'}]},
+        {text:'ສິ່ງທີ່ເຮັດໃຫ້ເຈົ້າຮູ້ສຶກຫງຸດຫງິດທີ່ສຸດໃນການເຮັດວຽກແມ່ນ...',options:[
+          {label:'ວຽກທີ່ຕ້ອງແກ້ຊ້ຳໆ ທັງທີ່ເຮັດໃຫ້ຖືກແຕ່ຄັ້ງທຳອິດໄດ້',char:'rework'},
+          {label:'ເຫັນຂອງເສຍຫຼຸດໄປຮອດຂັ້ນຕອນຕໍ່ໄປ',char:'defect'},
+          {label:'ເຫັນຂອງເສຍແລ້ວບໍ່ມີໃຜສ້ອມ ປ່ອຍໄວ້ດົນ',char:'fix'},
+          {label:'ໃຊ້ວິທີເກົ່າໆ ທັງທີ່ຮູ້ວ່າມີວິທີທີ່ດີກວ່າ',char:'newway'}]},
+        {text:'ຖ້າໃຫ້ເລືອກຄຳທີ່ເໝາະກັບຕົວເຈົ້າທີ່ສຸດ ຈະເປັນຄຳວ່າ...',options:[
+          {label:'ມາດຕະຖານຕ້ອງດີກວ່າເກົ່າສະເໝີ',char:'exceed'},
+          {label:'ຕົວເລກບໍ່ຕົວະ ຂ້ອຍເຊື່ອຂໍ້ມູນ',char:'data'},
+          {label:'ເຫັນບັນຫາແລ້ວຕ້ອງລົງມືເຮັດ',char:'fix'},
+          {label:'ເຮັດຊ້ຳແມ່ນເສຍເວລາ ເຮັດໃຫ້ຖືກແຕ່ຄັ້ງທຳອິດດີກວ່າ',char:'rework'}]}
+      ],
+      chars:{
+        exceed:{name:'Exceed Standard',tagline:'ຄົນທີ່ບໍ່ເຄີຍພໍໃຈກັບຄຳວ່າ "ແຄ່ຜ່ານ"',desc:'ເຈົ້າມອງວ່າມາດຕະຖານແມ່ນຈຸດເລີ່ມຕົ້ນ ບໍ່ແມ່ນເສັ້ນໄຊ. ທຸກວຽກທີ່ຜ່ານມືເຈົ້າຈະຖືກພັດທະນາໃຫ້ດີກວ່າຂໍ້ກຳນົດສະເໝີ. ເພື່ອນຮ່ວມງານມອງເຈົ້າເປັນແຮງບັນດານໃຈໃນການພັດທະນາຕົນເອງ.',traits:['ໃສ່ໃຈລາຍລະອຽດ','ພັດທະນາບໍ່ຢຸດ','ຕັ້ງມາດຕະຖານສູງ']},
+        data:{name:'Let Data Lead',tagline:'ຄົນທີ່ໃຫ້ຕົວເລກເວົ້າແທນຄວາມຮູ້ສຶກ',desc:'ເຈົ້າຕັດສິນໃຈດ້ວຍຂໍ້ມູນແລະຂໍ້ເທັດຈິງ ບໍ່ແມ່ນຄວາມຮູ້ສຶກ ຫຼື ການຄາດເດົາ. ເຈົ້າຊ່ວຍໃຫ້ທີມເຫັນບັນຫາທີ່ແທ້ຈິງ ແລະ ຕັດສິນໃຈໄດ້ແມ່ນຍຳຂຶ້ນໃນທຸກສະຖານະການ.',traits:['ມີເຫດຜົນ','ເຊື່ອຖືໄດ້','ວິເຄາະເກັ່ງ']},
+        defect:{name:"Don't Send Defects",tagline:'ດ່ານສຸດທ້າຍກ່ອນຂອງເສຍຈະຫຼຸດອອກໄປ',desc:'ເຈົ້າເປັນຄົນທີ່ມີຄວາມຮັບຜິດຊອບສູງ ແລະ ບໍ່ຍອມໃຫ້ວຽກທີ່ບໍ່ສົມບູນຜ່ານໄປສູ່ຂັ້ນຕອນຕໍ່ໄປ. ການມີຄົນແບບເຈົ້າຢູ່ໃນທີມ ຊ່ວຍໃຫ້ຄຸນນະພາບວຽກໂດຍລວມດີຂຶ້ນຢ່າງຊັດເຈນ.',traits:['ລະອຽດຮອບຄອບ','ຮັບຜິດຊອບສູງ','ຮັກສາຄຸນນະພາບ']},
+        rework:{name:'Rework is Waste',tagline:'ເຮັດໃຫ້ຖືກແຕ່ຄັ້ງທຳອິດ ດີກວ່າເຮັດຊ້ຳ',desc:'ເຈົ້າເຫັນຄຸນຄ່າຂອງເວລາແລະຊັບພະຍາກອນ. ເຈົ້າເຊື່ອວ່າການເຮັດວຽກໃຫ້ຖືກຕັ້ງແຕ່ຄັ້ງທຳອິດ ສຳຄັນກວ່າການຮີບເຮັດແລ້ວມາແກ້ພາຍຫຼັງ ເຮັດໃຫ້ທີມເຮັດວຽກໄດ້ຢ່າງມີປະສິດທິພາບຂຶ້ນ.',traits:['ມີປະສິດທິພາບ','ວາງແຜນດີ','ປະຢັດຊັບພະຍາກອນ']},
+        fix:{name:'See it Broken, Fix it',tagline:'ເຫັນບັນຫາແລ້ວລົງມືທັນທີ',desc:'ເຈົ້າບໍ່ປ່ອຍໃຫ້ບັນຫານ້ອຍໆກາຍເປັນບັນຫາໃຫຍ່. ເມື່ອເຫັນສິ່ງທີ່ບໍ່ຖືກຕ້ອງ ເຈົ້າລົງມືແກ້ໄຂທັນທີໂດຍບໍ່ລໍຖ້າໃຫ້ໃຜສັ່ງ. ຄວາມກະຕືລືລົ້ນແບບນີ້ແມ່ນຫົວໃຈຂອງທີມທີ່ແຂງແຮງ.',traits:['ລົງມືເຮັດຈິງ','ກະຕືລືລົ້ນ','ບໍ່ຜັດວັນປະກັນພຸ່ງ']},
+        newway:{name:'Find a New Way',tagline:'ບໍ່ເຄີຍຢຸດຊອກຫາວິທີທີ່ດີກວ່າ',desc:'ເຈົ້າກ້າຕັ້ງຄຳຖາມກັບວິທີເກົ່າໆ ແລະ ຊອກຫາທາງອອກໃໝ່ໆສະເໝີ. ຄວາມຄິດສ້າງສັນຂອງເຈົ້າຊ່ວຍຜັກດັນທີມແລະອົງກອນໃຫ້ພັດທະນາໄປຂ້າງໜ້າຢ່າງບໍ່ຢຸດຢັ້ງ.',traits:['ຄິດສ້າງສັນ','ກ້າປ່ຽນແປງ','ມອງໄປຂ້າງໜ້າ']}
+      },
+      games:{
+        exceed:{sub:'ເຕີມເກດໃຫ້ຢຸດໃນເຂດສີຂຽວ',instr:'ກົດປຸ່ມຄ້າງໄວ້ເພື່ອເຕີມເກດ ແລ້ວປ່ອຍໃຫ້ຢຸດໃນເຂດສີຂຽວ (ເກີນມາດຕະຖານພໍດີ ບໍ່ຫຼາຍ ຫຼື ໜ້ອຍເກີນໄປ)',hold:'ກົດຄ້າງໄວ້',selgame:'ເກມເຕີມເກດ',
+          tries:n=>n+' ຄັ້ງ',remain:n=>'ໂອກາດທີ່ເຫຼືອ: '+n,hit:b=>'🎯 ເຂົ້າເຂດ! ສຳເລັດ '+b+' ຄັ້ງ',miss:'❌ ບໍ່ເຂົ້າເຂດ ລອງອີກຄັ້ງ',
+          winT:'ເກີນມາດຕະຖານສຳເລັດ!',winS:'ເຈົ້າຄວບຄຸມເກດໄດ້ແມ່ນຍຳ ສົມກັບເປັນ Exceed Standard ຕົວຈິງ',loseT:'ເກືອບແລ້ວ!',loseS:'ການເຕີມເກດໃຫ້ພໍດີບໍ່ແມ່ນເລື່ອງງ່າຍ ແຕ່ເຈົ້າມີຈິດໃຈຂອງນັກພັດທະນາ!',score:b=>b+' / 3 ຄັ້ງ'},
+        data:{sub:'ຊອກຫາຕົວເລກທີ່ຜິດປົກກະຕິຈາກຂໍ້ມູນ',instr:'ແຕະຕົວເລກທີ່ "ສູງຜິດປົກກະຕິ" ເມື່ອທຽບກັບຕົວອື່ນໆໃນກຸ່ມ (Defect Rate %)',selgame:'ຈັບຕົວເລກຜິດ',
+          round:(c,t)=>`ຮອບ ${c}/${t}`,line:i=>'Line '+i,resT:'ວິເຄາະເກັ່ງຫຼາຍ!',resS:'ເຈົ້າຊອກຫາຄວາມຜິດປົກກະຕິຂອງຂໍ້ມູນໄດ້ແມ່ນຍຳ ສົມກັບເປັນ Let Data Lead',score:s=>s+' / 3 ຂໍ້'},
+        defect:{sub:'ແຕະຂອງເສຍກ່ອນຈະຜ່ານເສັ້ນສີແດງ!',instr:t=>`ແຕະສະເພາະສິນຄ້າທີ່ມີຕຳໜິ ❌ ປ່ອຍສິນຄ້າດີ ✅ ໃຫ້ຜ່ານໄປ! ເວລາ ${t}s`,selgame:'ດັກຂອງເສຍ',danger:'ເສັ້ນອັນຕະລາຍ',
+          score:s=>s+' / 8',winT:'ດ່ານຄຸນນະພາບສຸດແຂງແກ່ນ!',loseT:'ຝຶກຝົນອີກໜ້ອຍໜຶ່ງ!',resS:s=>'ເຈົ້າດັກຂອງເສຍໄດ້ '+s+" ຊິ້ນ ສົມກັບເປັນ Don't Send Defects",scoreFmt:s=>s+' / 8 ຊິ້ນ'},
+        rework:{sub:'ຄັດແຍກວຽກດີອອກຈາກວຽກທີ່ຕ້ອງແກ້',instr:'ເບິ່ງສະຖານະການ ແລ້ວຕັດສິນໃຈວ່າ "ຜ່ານໄດ້ເລີຍ" ຫຼື "ຕ້ອງແກ້ໄຂໃໝ່"',selgame:'ຄັດວຽກດີ-ເສຍ',good:'✅ ຜ່ານໄດ້ເລີຍ',redo:'🔁 ຕ້ອງແກ້ໄຂ',
+          round:c=>c+'/5',score:s=>'ຄະແນນ: '+s+'/5',winT:'ຄັດແຍກໄດ້ແມ່ນຫຼາຍ!',okT:'ໃຊ້ໄດ້ເລີຍ!',resS:s=>'ເຈົ້າຕັດສິນໃຈຖືກ '+s+' ຈາກ 5 ສະຖານະການ ສົມກັບເປັນ Rework is Waste',scoreFmt:s=>s+' / 5 ຂໍ້',
+          scenarios:[
+            {emoji:'👕',text:'ຫຍິບຕະເຂັບສຳເລັດແລ້ວ ກວດເບິ່ງແລ້ວຊື່ແລະແໜ້ນດີ',answer:true},
+            {emoji:'🧵',text:'ດ້າຍຫຼຸດບາງຈຸດ ເຫັນຊັດເມື່ອເບິ່ງໃກ້ໆ',answer:false},
+            {emoji:'👖',text:'ຕິດປ້າຍ Size ຜິດຕຳແໜ່ງທີ່ກຳນົດ',answer:false},
+            {emoji:'🧥',text:'ຊິບຮູດໄດ້ລື່ນດີ ຕະເຂັບຮຽບຮ້ອຍຕາມມາດຕະຖານ',answer:true},
+            {emoji:'👔',text:'ມີຮອຍເປື້ອນນ້ອຍໆທີ່ຊັກອອກບໍ່ໄດ້',answer:false}]},
+        fix:{sub:'ແຕະຈຸດທີ່ເສຍໃຫ້ໄວທີ່ສຸດ!',instr:t=>`ແຕະ 🔧 ທີ່ປາກົດໃຫ້ໄວທີ່ສຸດ ພາຍໃນ ${t}s`,selgame:'ຕີຈຸດເສຍ',
+          score:s=>s+' ຄະແນນ',winT:'ມືໄວສຸດໆ!',okT:'ລົງມືໄວດີ!',resS:s=>'ເຈົ້າສ້ອມຈຸດເສຍໄດ້ '+s+' ຄັ້ງ ສົມກັບເປັນ See it Broken, Fix it',scoreFmt:s=>s+' ຄະແນນ'},
+        newway:{sub:'ຊອກຫາທາງລັດທີ່ໄວທີ່ສຸດໄປຫາເປົ້າໝາຍ',instr:'ແຕະຊ່ອງຕໍ່ໄປທີ່ "ໃກ້ 🎯 ທີ່ສຸດ" ເພື່ອຊອກຫາທາງລັດທີ່ໄວທີ່ສຸດ',selgame:'ຊອກຫາທາງລັດ',
+          step:c=>`ກ້າວທີ ${c}/4`,resT:'ພົບທາງລັດແລ້ວ!',resS:'ເຈົ້າຊອກຫາເສັ້ນທາງທີ່ໄວທີ່ສຸດໄດ້ຄົບທຸກກ້າວ ສົມກັບເປັນ Find a New Way',score:'4 / 4 ກ້າວ'}
+      }
+    }
+  };
+
+  if(!I18N[lang]){lang='th';localStorage.setItem('ktb_lang',lang);}
+  const L = () => I18N[lang];
+
+  /* ════════ SHARED ════════ */
+  let activeIntervals = [];
+  function clearAllIntervals(){activeIntervals.forEach(clearInterval);activeIntervals=[];}
+  function showScreen(id){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    const el=byId(id); if(el){el.classList.add('active');el.scrollTop=0;}
+  }
+  function showToast(msg){
+    const t=byId('toast'); t.textContent=msg; t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),2600);
+  }
+  let resultCharKey=null;
+
+  /* ════════ QUIZ ════════ */
+  let currentQ=0, scores={};
+  function startQuiz(){
+    currentQ=0; scores={exceed:0,data:0,defect:0,rework:0,fix:0,newway:0};
+    showScreen('screen-quiz'); renderQuestion();
+  }
+  function renderDots(){
+    const wrap=byId('progress-dots'); wrap.innerHTML='';
+    const qs=L().questions;
+    for(let i=0;i<qs.length;i++){
+      const dot=document.createElement('div');
+      dot.className='q-dot'+(i<currentQ?' done':i===currentQ?' current':'');
+      wrap.appendChild(dot);
+    }
+  }
+  function renderQuestion(){
+    renderDots();
+    const qs=L().questions; const q=qs[currentQ];
+    byId('q-num-label').textContent=L().ui.qNum(currentQ+1,qs.length);
+    byId('q-text').textContent=q.text;
+    const optWrap=byId('q-options'); optWrap.innerHTML='';
+    const letters=['A','B','C','D'];
+    q.options.forEach((opt,i)=>{
+      const btn=document.createElement('button');
+      btn.className='q-opt';
+      btn.innerHTML=`<span class="q-opt-letter">${letters[i]}</span><span>${opt.label}</span>`;
+      btn.onclick=()=>selectAnswer(opt.char);
+      optWrap.appendChild(btn);
+    });
+  }
+  function selectAnswer(charKey){
+    scores[charKey]++; currentQ++;
+    if(currentQ<L().questions.length) renderQuestion(); else showResult();
+  }
+  function showResult(){
+    let topChar='exceed', topScore=-1;
+    for(const key in scores){ if(scores[key]>topScore){topScore=scores[key];topChar=key;} }
+    resultCharKey=topChar;
+    renderResultTexts();
+    showScreen('screen-result');
+  }
+  function renderResultTexts(){
+    const key=resultCharKey; const meta=CHAR_META[key]; const c=L().chars[key];
+    byId('result-hero').style.background=meta.color;
+    byId('result-emoji').textContent=meta.emoji;
+    byId('result-name').textContent=c.name;
+    byId('result-tagline').textContent=c.tagline;
+    byId('result-desc').textContent=c.desc;
+    const tw=byId('result-traits'); tw.innerHTML='';
+    c.traits.forEach(t=>{const s=document.createElement('span');s.className='result-trait';s.textContent=t;tw.appendChild(s);});
+  }
+  function restartQuiz(){showScreen('screen-intro');}
+  function restartAll(){resultCharKey=null;clearAllIntervals();showScreen('screen-intro');}
+
+  /* ════════ GAME HUB ════════ */
+  function goToGameFromResult(){showScreen('screen-select');markRecommended();}
+  function markRecommended(){
+    const rec=L().ui.recommend;
+    document.querySelectorAll('.sel-card').forEach(card=>{
+      card.classList.remove('recommended');
+      const old=card.querySelector('.sel-badge'); if(old) old.remove();
+    });
+    if(resultCharKey){
+      const card=document.querySelector(`.sel-card[data-char="${resultCharKey}"]`);
+      if(card){
+        card.classList.add('recommended');
+        const b=document.createElement('div'); b.className='sel-badge'; b.textContent=rec; card.appendChild(b);
+      }
+    }
+  }
+  function backToSelect(){clearAllIntervals();showScreen('screen-select');markRecommended();}
+  function openGame(key){
+    showScreen('screen-'+key);
+    if(key==='exceed') initExceed();
+    if(key==='data') initData();
+    if(key==='defect') initDefect();
+    if(key==='rework') initRework();
+    if(key==='fix') initFix();
+    if(key==='newway') initNewway();
+  }
+  function showGameResult(emoji,title,sub,score,bg){
+    byId('gr-hero').style.background=bg;
+    byId('gr-emoji').textContent=emoji;
+    byId('gr-title').textContent=title;
+    byId('gr-sub').textContent=sub;
+    byId('gr-score-num').textContent=score;
+    showScreen('screen-gameresult');
+  }
+
+  /* ══ GAME 1: EXCEED ══ */
+  let exceedHeight=0,exceedDir=1,exceedTries=3,exceedRunning=false,exceedBest=0,exceedInterval=null;
+  const EXCEED_TARGET_MIN=72,EXCEED_TARGET_MAX=88;
+  function initExceed(){
+    exceedTries=3;exceedHeight=0;exceedBest=0;
+    byId('exceed-target-zone').style.bottom=EXCEED_TARGET_MIN+'%';
+    byId('exceed-target-zone').style.height=(EXCEED_TARGET_MAX-EXCEED_TARGET_MIN)+'%';
+    byId('exceed-fill').style.height='0%';
+    byId('exceed-tries').textContent=L().games.exceed.tries(exceedTries);
+    byId('exceed-score-text').textContent=L().games.exceed.remain(exceedTries);
+  }
+  function exceedStart(e){
+    if(e)e.preventDefault();
+    if(exceedTries<=0||exceedRunning)return;
+    exceedRunning=true;exceedHeight=0;exceedDir=1;
+    exceedInterval=setInterval(()=>{
+      exceedHeight+=exceedDir*2.2;
+      if(exceedHeight>=100)exceedHeight=100;
+      byId('exceed-fill').style.height=exceedHeight+'%';
+    },16);
+    activeIntervals.push(exceedInterval);
+  }
+  function exceedCancelDrag(){if(exceedRunning)exceedStop();}
+  function exceedStop(e){
+    if(e)e.preventDefault();
+    if(!exceedRunning)return;
+    exceedRunning=false;clearInterval(exceedInterval);exceedTries--;
+    const inZone=exceedHeight>=EXCEED_TARGET_MIN&&exceedHeight<=EXCEED_TARGET_MAX;
+    if(inZone)exceedBest++;
+    const g=L().games.exceed;
+    byId('exceed-tries').textContent=g.tries(exceedTries);
+    byId('exceed-score-text').textContent=inZone?g.hit(exceedBest):g.miss;
+    if(exceedTries<=0){
+      setTimeout(()=>{
+        const success=exceedBest>=1; const gg=L().games.exceed;
+        showGameResult(success?'🏆':'💪',success?gg.winT:gg.loseT,success?gg.winS:gg.loseS,gg.score(exceedBest),'#C8860D');
+      },800);
+    } else {
+      setTimeout(()=>{byId('exceed-fill').style.height='0%';},900);
+    }
+  }
+
+  /* ══ GAME 2: DATA ══ */
+  let dataRound=0,dataScore=0;
+  const dataRounds=[{nums:[2.1,2.3,8.9,2.0],oddIdx:2},{nums:[1.5,1.4,1.6,5.2],oddIdx:3},{nums:[3.0,9.1,3.2,2.9],oddIdx:1}];
+  function initData(){
+    dataRound=0;dataScore=0;
+    byId('data-round').textContent=L().games.data.round(1,dataRounds.length);
+    renderDataRound();
+  }
+  function renderDataRound(){
+    const r=dataRounds[dataRound]; const grid=byId('data-grid'); grid.innerHTML='';
+    const g=L().games.data;
+    r.nums.forEach((n,i)=>{
+      const card=document.createElement('div'); card.className='data-card';
+      card.innerHTML=`<div class="data-num">${n}%</div><div class="data-label">${g.line(i+1)}</div>`;
+      card.onclick=()=>dataAnswer(i,card);
+      grid.appendChild(card);
+    });
+  }
+  function dataAnswer(i,card){
+    const r=dataRounds[dataRound]; const g=L().games.data;
+    if(i===r.oddIdx){
+      dataScore++; card.style.borderColor='#1F6FB2'; card.style.background='#E8F2FB';
+      setTimeout(()=>{
+        dataRound++;
+        if(dataRound<dataRounds.length){byId('data-round').textContent=g.round(dataRound+1,dataRounds.length);renderDataRound();}
+        else showGameResult('📊',g.resT,g.resS,g.score(dataScore),'#1F6FB2');
+      },500);
+    } else { card.classList.add('wrong-flash'); setTimeout(()=>card.classList.remove('wrong-flash'),300); }
+  }
+
+  /* ══ GAME 3: DEFECT ══ */
+  let defectScore=0,defectTotal=0,defectTimeLeft=15,defectTimerInt=null,defectSpawnInt=null;
+  function defectInstrHTML(){return L().games.defect.instr(`<span id="defect-timer">${defectTimeLeft}</span>`);}
+  function initDefect(){
+    defectScore=0;defectTotal=0;defectTimeLeft=15;
+    const g=L().games.defect;
+    byId('defect-score').textContent=g.score(0).replace(/^0/,'0');
+    byId('defect-score').textContent=g.score(0);
+    byId('defect-instr').innerHTML=defectInstrHTML();
+    byId('belt-wrap').innerHTML=`<div class="belt-line" style="top:85%">${g.danger}</div>`;
+    defectTimerInt=setInterval(()=>{
+      defectTimeLeft--;
+      const tEl=byId('defect-timer'); if(tEl)tEl.textContent=defectTimeLeft;
+      if(defectTimeLeft<=0)endDefectGame();
+    },1000);
+    activeIntervals.push(defectTimerInt);
+    defectSpawnInt=setInterval(spawnDefectItem,900);
+    activeIntervals.push(defectSpawnInt);
+  }
+  function spawnDefectItem(){
+    if(defectTotal>=8)return;
+    defectTotal++;
+    const isDefect=Math.random()<0.6;
+    const item=document.createElement('div'); item.className='belt-item';
+    item.textContent=isDefect?'❌':'✅';
+    item.style.left=(10+Math.random()*70)+'%'; item.style.top='-50px';
+    const belt=byId('belt-wrap'); belt.appendChild(item);
+    let pos=-50;
+    const fall=setInterval(()=>{pos+=4;item.style.top=pos+'px';if(pos>240){clearInterval(fall);if(item.parentNode)item.remove();}},30);
+    item.onclick=()=>{
+      clearInterval(fall);
+      if(isDefect){defectScore++;byId('defect-score').textContent=L().games.defect.score(defectScore);}
+      item.classList.add('tapped'); setTimeout(()=>{if(item.parentNode)item.remove();},200);
+    };
+  }
+  function endDefectGame(){
+    clearInterval(defectTimerInt);clearInterval(defectSpawnInt);
+    const g=L().games.defect; const pct=Math.round(defectScore/8*100);
+    showGameResult('🚫',pct>=60?g.winT:g.loseT,g.resS(defectScore),g.scoreFmt(defectScore),'#B23A3A');
+  }
+
+  /* ══ GAME 4: REWORK ══ */
+  let reworkRound=0,reworkScore=0;
+  function initRework(){
+    reworkRound=0;reworkScore=0;
+    const g=L().games.rework;
+    byId('rework-progress').textContent=g.score(0);
+    byId('rework-round').textContent=g.round(1);
+    renderReworkRound();
+  }
+  function renderReworkRound(){
+    const g=L().games.rework; const s=g.scenarios[reworkRound];
+    byId('rework-emoji').textContent=s.emoji;
+    byId('rework-scenario').textContent=s.text;
+    byId('rework-round').textContent=g.round(reworkRound+1);
+  }
+  function reworkAnswer(choice){
+    const g=L().games.rework; const s=g.scenarios[reworkRound];
+    if(choice===s.answer)reworkScore++;
+    reworkRound++;
+    byId('rework-progress').textContent=g.score(reworkScore);
+    if(reworkRound<g.scenarios.length) renderReworkRound();
+    else showGameResult('♻️',reworkScore>=4?g.winT:g.okT,g.resS(reworkScore),g.scoreFmt(reworkScore),'#3B7A3B');
+  }
+
+  /* ══ GAME 5: FIX ══ */
+  let fixScore=0,fixTimeLeft=15,fixTimerInt=null,fixSpawnInt=null;
+  function fixInstrHTML(){return L().games.fix.instr(`<span id="fix-timer">${fixTimeLeft}</span>`);}
+  function initFix(){
+    fixScore=0;fixTimeLeft=15;
+    const g=L().games.fix;
+    byId('fix-score').textContent=g.score(0);
+    byId('fix-instr').innerHTML=fixInstrHTML();
+    const grid=byId('whack-grid'); grid.innerHTML='';
+    for(let i=0;i<6;i++){const cell=document.createElement('div');cell.className='whack-cell';cell.dataset.idx=i;grid.appendChild(cell);}
+    fixTimerInt=setInterval(()=>{
+      fixTimeLeft--;
+      const tEl=byId('fix-timer'); if(tEl)tEl.textContent=fixTimeLeft;
+      if(fixTimeLeft<=0)endFixGame();
+    },1000);
+    activeIntervals.push(fixTimerInt);
+    fixSpawnInt=setInterval(spawnFixTarget,1000);
+    activeIntervals.push(fixSpawnInt);
+  }
+  function spawnFixTarget(){
+    const cells=document.querySelectorAll('#whack-grid .whack-cell');
+    cells.forEach(c=>{c.classList.remove('active');c.textContent='';c.onclick=null;});
+    const idx=Math.floor(Math.random()*6); const cell=cells[idx];
+    cell.classList.add('active'); cell.textContent='🔧';
+    cell.onclick=()=>{
+      fixScore++; byId('fix-score').textContent=L().games.fix.score(fixScore);
+      cell.classList.add('hit'); setTimeout(()=>{cell.classList.remove('active','hit');cell.textContent='';},150);
+    };
+  }
+  function endFixGame(){
+    clearInterval(fixTimerInt);clearInterval(fixSpawnInt);
+    const g=L().games.fix;
+    showGameResult('🔧',fixScore>=8?g.winT:g.okT,g.resS(fixScore),g.scoreFmt(fixScore),'#A85A1E');
+  }
+
+  /* ══ GAME 6: NEWWAY ══ */
+  let newwayStep=0;
+  const newwayPaths=[{options:['🪨','➡️','🪨','🪨'],correct:1},{options:['🪨','🪨','⬆️','🪨'],correct:2},{options:['➡️','🪨','🪨','🪨'],correct:0},{options:['🪨','🎯','🪨','🪨'],correct:1}];
+  function initNewway(){
+    newwayStep=0;
+    byId('newway-step').textContent=L().games.newway.step(1);
+    renderNewwayStep();
+  }
+  function renderNewwayStep(){
+    const p=newwayPaths[newwayStep]; const grid=byId('path-grid'); grid.innerHTML='';
+    p.options.forEach((opt,i)=>{
+      const cell=document.createElement('div'); cell.className='path-cell'; cell.textContent=opt;
+      cell.onclick=()=>newwayAnswer(i,cell); grid.appendChild(cell);
+    });
+  }
+  function newwayAnswer(i,cell){
+    const g=L().games.newway; const p=newwayPaths[newwayStep];
+    document.querySelectorAll('#path-grid .path-cell').forEach(c=>c.classList.add('disabled'));
+    if(i===p.correct){
+      cell.classList.add('correct');
+      setTimeout(()=>{
+        newwayStep++;
+        if(newwayStep<newwayPaths.length){byId('newway-step').textContent=g.step(newwayStep+1);renderNewwayStep();}
+        else showGameResult('🚀',g.resT,g.resS,g.score,'#6B4FA0');
+      },400);
+    } else {
+      cell.classList.add('wrong');
+      setTimeout(()=>{document.querySelectorAll('#path-grid .path-cell').forEach(c=>c.classList.remove('disabled'));},400);
+    }
+  }
+
+  /* ════════ I18N APPLY ════════ */
+  function applyStatic(){
+    const u=L().ui;
+    document.documentElement.lang=lang;
+    document.querySelectorAll('#lang-switch .lang-btn').forEach(b=>{
+      const active=b.dataset.lang===lang;
+      b.classList.toggle('active',active);
+      b.setAttribute('aria-pressed',String(active));
+    });
+    byId('t-intro-title').innerHTML=u.introTitle;
+    byId('t-intro-sub').innerHTML=u.introSub;
+    byId('btn-start').textContent=u.startBtn;
+    byId('t-intro-foot').textContent=u.introFoot;
+    byId('t-result-label').textContent=u.resultLabel;
+    byId('btn-result-play').textContent=u.resultPlay;
+    byId('btn-result-retake').textContent=u.resultRetake;
+    byId('t-sel-title').textContent=u.selTitle;
+    byId('t-sel-sub').innerHTML=u.selSub;
+    byId('btn-sel-restart').textContent=u.selRestart;
+    byId('t-gr-score-label').textContent=u.grScoreLabel;
+    byId('btn-gr-prize').textContent=u.grPrize;
+    byId('btn-gr-other').textContent=u.grOther;
+    byId('btn-rework-good').textContent=L().games.rework.good;
+    byId('btn-rework-redo').textContent=L().games.rework.redo;
+    byId('exceed-btn').textContent=L().games.exceed.hold;
+    // select cards
+    document.querySelectorAll('.sel-card').forEach(card=>{
+      const k=card.dataset.char;
+      card.querySelector('[data-selname]').textContent=L().chars[k].name;
+      card.querySelector('[data-selgame]').textContent=L().games[k].selgame;
+    });
+    // game headers
+    Object.keys(CHAR_META).forEach(k=>{
+      const tEl=document.querySelector(`[data-gtitle="${k}"]`);
+      if(tEl)tEl.textContent=CHAR_META[k].emoji+' '+L().chars[k].name;
+      const sEl=document.querySelector(`[data-gsub="${k}"]`);
+      if(sEl)sEl.textContent=L().games[k].sub;
+      const iEl=document.querySelector(`[data-ginstr="${k}"]`);
+      if(iEl)iEl.textContent=L().games[k].instr;
+    });
+    // dynamic-timer instructions
+    const di=byId('defect-instr'); if(di)di.innerHTML=defectInstrHTML();
+    const fi=byId('fix-instr'); if(fi)fi.innerHTML=fixInstrHTML();
+  }
+  function applyI18n(){
+    applyStatic();
+    const active=document.querySelector('.screen.active');
+    if(active){
+      const id=active.id;
+      if(id==='screen-quiz') renderQuestion();
+      if(id==='screen-result'&&resultCharKey) renderResultTexts();
+      if(id==='screen-select') markRecommended();
+    }
+  }
+
+  /* ════════ WIRING ════════ */
+  document.querySelectorAll('#lang-switch .lang-btn').forEach(b=>{
+    b.onclick=()=>{lang=b.dataset.lang;localStorage.setItem('ktb_lang',lang);applyI18n();};
+  });
+  byId('btn-start').onclick=startQuiz;
+  byId('btn-result-play').onclick=goToGameFromResult;
+  byId('btn-result-retake').onclick=restartQuiz;
+  byId('btn-sel-restart').onclick=restartAll;
+  document.querySelectorAll('.sel-card').forEach(card=>{card.onclick=()=>openGame(card.dataset.char);});
+  document.querySelectorAll('.game-back').forEach(b=>{b.onclick=backToSelect;});
+  byId('btn-rework-good').onclick=()=>reworkAnswer(true);
+  byId('btn-rework-redo').onclick=()=>reworkAnswer(false);
+  byId('btn-gr-prize').onclick=()=>showToast(L().ui.prizeToast);
+  byId('btn-gr-other').onclick=backToSelect;
+  const exBtn=byId('exceed-btn');
+  exBtn.addEventListener('mousedown',exceedStart);
+  exBtn.addEventListener('mouseup',exceedStop);
+  exBtn.addEventListener('mouseleave',exceedCancelDrag);
+  exBtn.addEventListener('touchstart',exceedStart,{passive:false});
+  exBtn.addEventListener('touchend',exceedStop,{passive:false});
+
+  applyI18n();
+});
+</script>
+</body>
+</html>
